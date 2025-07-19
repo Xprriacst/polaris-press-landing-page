@@ -611,19 +611,19 @@ const HomePage = () => {
             className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center"
           >
             <div className="p-6">
-              <img src="/logo-playboy.svg" alt="Playboy" className="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity mx-auto" />
+              <img src="/logo-playboy.svg" alt="Playboy" className="h-[82px] w-auto opacity-60 hover:opacity-100 transition-opacity mx-auto" />
             </div>
             <div className="p-6">
-              <img src="/logo-lui.svg" alt="Lui Magazine" className="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity mx-auto" />
+              <img src="/logo-lui.svg" alt="Lui Magazine" className="h-[82px] w-auto opacity-60 hover:opacity-100 transition-opacity mx-auto" />
             </div>
             <div className="p-6">
-              <img src="/logo-voyage.png" alt="Voyage de Luxe" className="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity mx-auto" />
+              <img src="/logo-voyage.png" alt="Voyage de Luxe" className="h-[82px] w-auto opacity-60 hover:opacity-100 transition-opacity mx-auto" />
             </div>
             <div className="p-6">
-              <img src="/logo-cuisine-ad.jpg" alt="Cuisine A&D" className="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity mx-auto" />
+              <img src="/logo-cuisine-ad.jpg" alt="Cuisine A&D" className="h-[82px] w-auto opacity-60 hover:opacity-100 transition-opacity mx-auto" />
             </div>
             <div className="p-6 col-span-2 md:col-span-1">
-              <img src="/logo-florentin.png" alt="Florentin" className="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity mx-auto" />
+              <img src="/logo-florentin.png" alt="Florentin" className="h-[82px] w-auto opacity-60 hover:opacity-100 transition-opacity mx-auto" />
             </div>
           </motion.div>
         </div>
@@ -660,15 +660,16 @@ const HomePage = () => {
               </p>
             </motion.div>
 
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="bg-white backdrop-blur-sm rounded-xl p-6 border border-gray-200 shadow-md"
             >
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">L'IA va-t-elle remplacer les journalistes ?</h3>
+              <h3 className="text-xl font-semibold mb-3 text-gray-900">J'utilise déjà ChatGPT, est-ce que ça va vraiment me servir ?</h3>
               <p className="text-gray-600">
-                L'IA est un outil au service des journalistes, pas un remplaçant. Elle permet d'automatiser certaines tâches répétitives pour libérer du temps pour le travail d'investigation, d'analyse et de création de valeur qui reste l'apanage des journalistes.
+                Oui, nos formations vont bien au-delà de l'utilisation basique de ChatGPT. Nous vous montrons comment intégrer l'IA dans vos workflows éditoriaux, automatiser des tâches complexes, générer des contenus fiables et gagner en efficacité sur l'ensemble de la chaîne de production journalistique.
               </p>
             </motion.div>
 
@@ -678,9 +679,9 @@ const HomePage = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="bg-white backdrop-blur-sm rounded-xl p-6 border border-gray-200 shadow-md"
             >
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">Comment éviter les hallucinations de l'IA ?</h3>
+              <h3 className="text-xl font-semibold mb-3 text-gray-900">Quel est le format des formations ?</h3>
               <p className="text-gray-600">
-                Nos formations incluent des modules spécifiques sur la vérification des sources et les techniques pour contrôler la fiabilité des contenus générés par l'IA. Nous enseignons les bonnes pratiques pour éviter les erreurs factuelles.
+                Nos formations sont proposées en présentiel, à distance ou en format hybride. Elles alternent théorie, démonstrations, ateliers pratiques et accompagnement personnalisé pour garantir une montée en compétences concrète et applicable immédiatement dans votre rédaction.
               </p>
             </motion.div>
 
@@ -688,18 +689,6 @@ const HomePage = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="bg-white backdrop-blur-sm rounded-xl p-6 border border-gray-200 shadow-md"
-            >
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">Quels gains de productivité peut-on espérer ?</h3>
-              <p className="text-gray-600">
-                Selon nos études, les journalistes formés gagnent 4 heures sur un article moyen, réduisent de 4 fois le temps de retranscription audio et diminuent jusqu'à 95% les coûts de création de visuels illustratifs.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
               className="bg-white backdrop-blur-sm rounded-xl p-6 border border-gray-200 shadow-md"
             >
               <h3 className="text-xl font-semibold mb-3 text-gray-900">Proposez-vous un suivi après la formation ?</h3>
