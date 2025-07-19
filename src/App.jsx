@@ -610,19 +610,19 @@ const HomePage = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center"
           >
-            <div className="bg-gray-50 backdrop-blur-sm rounded-xl p-6 border border-gray-200 hover:bg-gray-100 transition-all duration-300 shadow-md">
+            <div className="p-6">
               <img src="/logo-playboy.svg" alt="Playboy" className="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity mx-auto" />
             </div>
-            <div className="bg-gray-50 backdrop-blur-sm rounded-xl p-6 border border-gray-200 hover:bg-gray-100 transition-all duration-300 shadow-md">
+            <div className="p-6">
               <img src="/logo-lui.svg" alt="Lui Magazine" className="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity mx-auto" />
             </div>
-            <div className="bg-gray-50 backdrop-blur-sm rounded-xl p-6 border border-gray-200 hover:bg-gray-100 transition-all duration-300 shadow-md">
+            <div className="p-6">
               <img src="/logo-voyage.png" alt="Voyage de Luxe" className="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity mx-auto" />
             </div>
-            <div className="bg-gray-50 backdrop-blur-sm rounded-xl p-6 border border-gray-200 hover:bg-gray-100 transition-all duration-300 shadow-md">
+            <div className="p-6">
               <img src="/logo-cuisine-ad.jpg" alt="Cuisine A&D" className="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity mx-auto" />
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:bg-white/20 transition-all duration-300 col-span-2 md:col-span-1">
+            <div className="p-6 col-span-2 md:col-span-1">
               <img src="/logo-florentin.png" alt="Florentin" className="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity mx-auto" />
             </div>
           </motion.div>
