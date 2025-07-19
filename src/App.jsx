@@ -188,7 +188,10 @@ const HomePage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
               className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-blue-500 transition-all duration-300 cursor-pointer"
-              onClick={() => navigate('/formation-ia01')}
+              onClick={() => {
+                navigate('/formation-ia01');
+                window.scrollTo(0, 0);
+              }}
             >
               <FileText className="h-12 w-12 text-blue-400 mb-6" />
               <h3 className="text-2xl font-bold mb-4 text-white">IA01 – Rédaction & retranscription</h3>
@@ -201,7 +204,10 @@ const HomePage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-purple-500 transition-all duration-300 cursor-pointer"
-              onClick={() => navigate('/formation-ia02')}
+              onClick={() => {
+                navigate('/formation-ia02');
+                window.scrollTo(0, 0);
+              }}
             >
               <Brain className="h-12 w-12 text-purple-400 mb-6" />
               <h3 className="text-2xl font-bold mb-4 text-white">IA02 – Images générées & améliorées</h3>
@@ -214,7 +220,10 @@ const HomePage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-cyan-500 transition-all duration-300 cursor-pointer"
-              onClick={() => navigate('/formation-ia03')}
+              onClick={() => {
+                navigate('/formation-ia03');
+                window.scrollTo(0, 0);
+              }}
             >
               <Video className="h-12 w-12 text-cyan-400 mb-6" />
               <h3 className="text-2xl font-bold mb-4 text-white">IA03 – Automatisation vidéo</h3>
@@ -368,19 +377,19 @@ const HomePage = () => {
             className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center"
           >
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:bg-white/20 transition-all duration-300">
-              <img src="/logo-lui.png" alt="Lui Magazine" className="h-12 w-auto filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity" />
+              <img src="/logo-playboy.svg" alt="Playboy" className="h-12 w-auto filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity mx-auto" />
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:bg-white/20 transition-all duration-300">
-              <img src="/logo-voyage-de-luxe.png" alt="Voyage de Luxe" className="h-12 w-auto filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity" />
+              <img src="/logo-lui.svg" alt="Lui Magazine" className="h-12 w-auto filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity mx-auto" />
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:bg-white/20 transition-all duration-300">
-              <img src="/logo-cuisine-ad.png" alt="Cuisine A&D" className="h-12 w-auto filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity" />
+              <img src="/logo-voyage-de-luxe.svg" alt="Voyage de Luxe" className="h-12 w-auto filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity mx-auto" />
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:bg-white/20 transition-all duration-300">
-              <img src="/logo-florentin.png" alt="Florentin" className="h-12 w-auto filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity" />
+              <img src="/logo-cuisine-ad.svg" alt="Cuisine A&D" className="h-12 w-auto filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity mx-auto" />
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:bg-white/20 transition-all duration-300 col-span-2 md:col-span-1">
-              <img src="/logo-point.png" alt="Point" className="h-12 w-auto filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity" />
+              <img src="/logo-florentin.svg" alt="Florentin" className="h-12 w-auto filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity mx-auto" />
             </div>
           </motion.div>
         </div>
