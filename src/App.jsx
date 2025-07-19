@@ -14,6 +14,7 @@ import FormationIA01 from './pages/FormationIA01';
 import FormationIA02 from './pages/FormationIA02';
 import FormationIA03 from './pages/FormationIA03';
 import FormationSurMesure from './pages/FormationSurMesure';
+import ScrollToTop from './components/ScrollToTop';
 import './App.css';
 import { 
   Search, 
@@ -616,13 +617,13 @@ const HomePage = () => {
               <img src="/logo-lui.svg" alt="Lui Magazine" className="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity mx-auto" />
             </div>
             <div className="bg-gray-50 backdrop-blur-sm rounded-xl p-6 border border-gray-200 hover:bg-gray-100 transition-all duration-300 shadow-md">
-              <img src="/logo-voyage-de-luxe.svg" alt="Voyage de Luxe" className="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity mx-auto" />
+              <img src="/logo-voyage.png" alt="Voyage de Luxe" className="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity mx-auto" />
             </div>
             <div className="bg-gray-50 backdrop-blur-sm rounded-xl p-6 border border-gray-200 hover:bg-gray-100 transition-all duration-300 shadow-md">
-              <img src="/logo-cuisine-ad.svg" alt="Cuisine A&D" className="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity mx-auto" />
+              <img src="/logo-cuisine-ad.jpg" alt="Cuisine A&D" className="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity mx-auto" />
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:bg-white/20 transition-all duration-300 col-span-2 md:col-span-1">
-              <img src="/logo-florentin.svg" alt="Florentin" className="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity mx-auto" />
+              <img src="/logo-florentin.png" alt="Florentin" className="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity mx-auto" />
             </div>
           </motion.div>
         </div>
@@ -866,13 +867,16 @@ const HomePage = () => {
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/formation-ia01" element={<FormationIA01 />} />
-      <Route path="/formation-ia02" element={<FormationIA02 />} />
-      <Route path="/formation-ia03" element={<FormationIA03 />} />
-      <Route path="/formation-sur-mesure" element={<FormationSurMesure />} />
-    </Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/formation-ia01" element={<FormationIA01 />} />
+        <Route path="/formation-ia02" element={<FormationIA02 />} />
+        <Route path="/formation-ia03" element={<FormationIA03 />} />
+        <Route path="/formation-sur-mesure" element={<FormationSurMesure />} />
+      </Routes>
+    </>
   );
 }
 
