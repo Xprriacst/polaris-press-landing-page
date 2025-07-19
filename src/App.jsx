@@ -73,7 +73,7 @@ const HomePage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-gray-800 max-w-5xl mx-auto leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 max-w-5xl mx-auto leading-tight">
               L'intelligence artificielle générative au service des rédactions
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto mb-12 leading-relaxed">
@@ -106,7 +106,7 @@ const HomePage = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
               Des résultats <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">mesurables</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -179,7 +179,7 @@ const HomePage = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-gray-900 max-w-4xl mx-auto leading-tight">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 max-w-4xl mx-auto leading-tight">
               Pourquoi former vos équipes à l'
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 IA Générative
@@ -222,7 +222,7 @@ const HomePage = () => {
               >
                 <Shield className="h-12 w-12 text-blue-600" />
               </motion.div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Réduire les inquiétudes</h3>
+              <h3 className="text-xl font-semibold mb-4 text-gray-900">Réduire les inquiétudes</h3>
               <p className="text-gray-600 leading-relaxed">
                 Démystifier l'IA, comprendre ses limites et maîtriser les bonnes pratiques pour une utilisation sereine.
               </p>
@@ -241,7 +241,7 @@ const HomePage = () => {
               >
                 <Zap className="h-12 w-12 text-green-600" />
               </motion.div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Gagner en efficacité</h3>
+              <h3 className="text-xl font-semibold mb-4 text-gray-900">Gagner en efficacité</h3>
               <p className="text-gray-600 leading-relaxed">
                 Automatiser les tâches répétitives pour se concentrer sur l'enquête, l'analyse et la création de valeur.
               </p>
@@ -260,7 +260,7 @@ const HomePage = () => {
               >
                 <TrendingUp className="h-12 w-12 text-purple-600" />
               </motion.div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Rester compétitif</h3>
+              <h3 className="text-xl font-semibold mb-4 text-gray-900">Rester compétitif</h3>
               <p className="text-gray-600 leading-relaxed">
                 S'adapter aux nouvelles méthodes de travail et maintenir son avantage concurrentiel dans un secteur en mutation.
               </p>
@@ -279,7 +279,7 @@ const HomePage = () => {
               >
                 <AlertTriangle className="h-12 w-12 text-red-600" />
               </motion.div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Réduire les risques</h3>
+              <h3 className="text-xl font-semibold mb-4 text-gray-900">Réduire les risques</h3>
               <p className="text-gray-600 leading-relaxed">
                 Éviter les erreurs factuelles, les biais et les problèmes déontologiques liés à un usage non maîtrisé.
               </p>
@@ -334,7 +334,7 @@ const HomePage = () => {
           >
             <TextGenerateEffect 
               words="Nos Services" 
-              className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+              className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
             />
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Une approche structurée, éthique et opérationnelle pour que vos équipes puissent tirer parti de l'IA en toute confiance.
@@ -350,7 +350,7 @@ const HomePage = () => {
             >
               <div className="flex items-center mb-6">
                 <CheckCircle className="h-12 w-12 text-blue-600 mr-4" />
-                <h3 className="text-2xl font-bold text-gray-900">Audit IA</h3>
+                <h3 className="text-xl font-semibold text-gray-900">Audit IA</h3>
               </div>
               <p className="text-gray-600 mb-6">
                 Diagnostiquer. Comprendre. Agir. Une vision objective de l'usage de l'IA dans votre rédaction avec une feuille de route priorisée.
@@ -370,7 +370,7 @@ const HomePage = () => {
             >
               <div className="flex items-center mb-6">
                 <GraduationCap className="h-12 w-12 text-purple-600 mr-4" />
-                <h3 className="text-2xl font-bold text-gray-900">Formations IA</h3>
+                <h3 className="text-xl font-semibold text-gray-900">Formations IA</h3>
               </div>
               <p className="text-gray-600 mb-6">
                 Des modules concrets pour des résultats immédiats. Formations conçues par et pour les journalistes.
@@ -390,7 +390,7 @@ const HomePage = () => {
             >
               <div className="flex items-center mb-6">
                 <Users className="h-12 w-12 text-cyan-600 mr-4" />
-                <h3 className="text-2xl font-bold text-gray-900">Accompagnement</h3>
+                <h3 className="text-xl font-semibold text-gray-900">Accompagnement</h3>
               </div>
               <p className="text-gray-600 mb-6">
                 Conseil personnalisé et suivi post-formation pour une adoption réussie de l'IA dans vos processus éditoriaux.
@@ -416,7 +416,7 @@ const HomePage = () => {
           >
             <TextGenerateEffect 
               words="Formations IA" 
-              className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent"
+              className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
             />
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Des modules concrets pour des résultats immédiats
@@ -432,7 +432,7 @@ const HomePage = () => {
               onClick={() => navigate('/formation-ia01')}
             >
               <FileText className="h-12 w-12 text-blue-600 mb-6" />
-              <h3 className="text-2xl font-bold mb-4 text-gray-900">IA01 – Rédaction & retranscription</h3>
+              <h3 className="text-xl font-semibold mb-4 text-gray-900">IA01 – Rédaction & retranscription</h3>
               <p className="text-gray-600 mb-6">Rédiger plus vite, mieux, en s'appuyant sur des agents IA fiables. Retranscrire automatiquement ses interviews en un temps record.</p>
               <div className="text-blue-600 font-semibold">3 heures</div>
             </motion.div>
@@ -445,7 +445,7 @@ const HomePage = () => {
               onClick={() => navigate('/formation-ia02')}
             >
               <Brain className="h-12 w-12 text-purple-600 mb-6" />
-              <h3 className="text-2xl font-bold mb-4 text-gray-900">IA02 – Images générées & améliorées</h3>
+              <h3 className="text-xl font-semibold mb-4 text-gray-900">IA02 – Images générées & améliorées</h3>
               <p className="text-gray-600 mb-6">Créer des visuels percutants sans faire appel à des prestataires, et améliorer la qualité d'images pour vos publications.</p>
               <div className="text-purple-600 font-semibold">2 heures</div>
             </motion.div>
@@ -458,7 +458,7 @@ const HomePage = () => {
               onClick={() => navigate('/formation-ia03')}
             >
               <Video className="h-12 w-12 text-cyan-600 mb-6" />
-              <h3 className="text-2xl font-bold mb-4 text-gray-900">IA03 – Automatisation vidéo</h3>
+              <h3 className="text-xl font-semibold mb-4 text-gray-900">IA03 – Automatisation vidéo</h3>
               <p className="text-gray-600 mb-6">Gagner du temps en montage et publier facilement des extraits courts adaptés aux formats sociaux.</p>
               <div className="text-cyan-600 font-semibold">2 heures</div>
             </motion.div>
@@ -472,7 +472,7 @@ const HomePage = () => {
           >
             <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 border border-blue-200 cursor-pointer hover:border-blue-300 transition-all duration-300 shadow-lg hover:shadow-xl"
                  onClick={() => navigate('/formation-sur-mesure')}>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900">Formation sur mesure</h3>
+              <h3 className="text-xl font-semibold mb-4 text-gray-900">Formation sur mesure</h3>
               <p className="text-gray-600 mb-6 max-w-3xl mx-auto">
                 À la suite de notre audit, nous co-construisons des parcours adaptés à vos besoins : cas pratiques issus de vos propres contenus, 
                 outils compatibles avec votre environnement, accompagnement renforcé post-formation.
@@ -499,7 +499,7 @@ const HomePage = () => {
           >
             <TextGenerateEffect 
               words="Nos Engagements" 
-              className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent"
+              className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
             />
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Une IA responsable, encadrée, au service du journalisme
@@ -512,7 +512,7 @@ const HomePage = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+              <div className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
                 <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                   Notre conviction :
                 </span>
@@ -555,7 +555,7 @@ const HomePage = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="bg-white rounded-2xl p-8 border border-blue-200 shadow-lg"
             >
-              <h3 className="text-2xl font-bold mb-6 text-gray-900 flex items-center">
+              <h3 className="text-xl font-semibold mb-4 text-gray-900 flex items-center">
                 <Target className="h-8 w-8 text-blue-600 mr-3" />
                 Pourquoi choisir Polaris IA ?
               </h3>
@@ -597,7 +597,7 @@ const HomePage = () => {
           >
             <TextGenerateEffect 
               words="Nos Références" 
-              className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+              className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
             />
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Ils nous font confiance pour leur transformation IA
@@ -640,7 +640,7 @@ const HomePage = () => {
           >
             <TextGenerateEffect 
               words="Questions fréquentes" 
-              className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+              className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
             />
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Retrouvez les réponses aux questions les plus courantes sur nos formations IA
@@ -654,7 +654,7 @@ const HomePage = () => {
               transition={{ duration: 0.8, delay: 0.1 }}
               className="bg-white backdrop-blur-sm rounded-xl p-6 border border-gray-200 shadow-md"
             >
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">Faut-il avoir des connaissances techniques pour suivre les formations ?</h3>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Faut-il avoir des connaissances techniques pour suivre les formations ?</h3>
               <p className="text-gray-600">
                 Non, aucun prérequis technique n'est nécessaire. Nos formations sont conçues pour être accessibles à tous les journalistes, quel que soit leur niveau technique. Nous partons des bases et progressons étape par étape.
               </p>
@@ -667,7 +667,7 @@ const HomePage = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="bg-white backdrop-blur-sm rounded-xl p-6 border border-gray-200 shadow-md"
             >
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">J'utilise déjà ChatGPT, est-ce que ça va vraiment me servir ?</h3>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">J'utilise déjà ChatGPT, est-ce que ça va vraiment me servir ?</h3>
               <p className="text-gray-600">
                 Oui, nos formations vont bien au-delà de l'utilisation basique de ChatGPT. Nous vous montrons comment intégrer l'IA dans vos workflows éditoriaux, automatiser des tâches complexes, générer des contenus fiables et gagner en efficacité sur l'ensemble de la chaîne de production journalistique.
               </p>
@@ -679,7 +679,7 @@ const HomePage = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="bg-white backdrop-blur-sm rounded-xl p-6 border border-gray-200 shadow-md"
             >
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">Quel est le format des formations ?</h3>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Quel est le format des formations ?</h3>
               <p className="text-gray-600">
                 Nos formations sont proposées en présentiel, à distance ou en format hybride. Elles alternent théorie, démonstrations, ateliers pratiques et accompagnement personnalisé pour garantir une montée en compétences concrète et applicable immédiatement dans votre rédaction.
               </p>
@@ -691,7 +691,7 @@ const HomePage = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="bg-white backdrop-blur-sm rounded-xl p-6 border border-gray-200 shadow-md"
             >
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">Proposez-vous un suivi après la formation ?</h3>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Proposez-vous un suivi après la formation ?</h3>
               <p className="text-gray-600">
                 Oui, nous proposons un accompagnement post-formation pour assurer l'adoption des outils dans vos workflows. Pour les formations sur-mesure, cet accompagnement est renforcé et personnalisé.
               </p>
@@ -703,7 +703,7 @@ const HomePage = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="bg-white backdrop-blur-sm rounded-xl p-6 border border-gray-200 shadow-md"
             >
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">Les formations peuvent-elles être adaptées à notre rédaction ?</h3>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Les formations peuvent-elles être adaptées à notre rédaction ?</h3>
               <p className="text-gray-600">
                 Absolument ! Nous proposons des formations sur-mesure après audit de vos besoins éditoriaux et techniques. Le parcours est co-construit avec vos équipes et inclut des cas pratiques issus de vos workflows.
               </p>
@@ -723,7 +723,7 @@ const HomePage = () => {
           >
             <TextGenerateEffect 
               words="Discutons de votre stratégie IA" 
-              className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+              className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
             />
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Prenez contact avec notre équipe pour organiser un audit ou construire un parcours sur mesure
@@ -746,7 +746,7 @@ const HomePage = () => {
               className="space-y-8"
             >
               <div className="bg-gray-50 backdrop-blur-sm rounded-xl p-6 border border-gray-200 shadow-md">
-                <h3 className="text-xl font-semibold mb-4 text-gray-900">Pourquoi nous choisir ?</h3>
+                <h3 className="text-lg font-semibold mb-4 text-gray-900">Pourquoi nous choisir ?</h3>
                 <ul className="space-y-3 text-gray-600">
                   <li>• Expertise croisée IA / journalisme</li>
                   <li>• Approche personnalisée et pragmatique</li>
@@ -757,7 +757,7 @@ const HomePage = () => {
               </div>
               
               <div className="bg-gray-50 backdrop-blur-sm rounded-xl p-6 border border-gray-200 shadow-md">
-                <h3 className="text-xl font-semibold mb-4 text-gray-900">Nos services</h3>
+                <h3 className="text-lg font-semibold mb-4 text-gray-900">Nos services</h3>
                 <div className="space-y-2 text-gray-600">
                   <p>🔍 <strong>Audit IA</strong> - Diagnostic complet de vos besoins</p>
                   <p>🎓 <strong>Formations</strong> - Modules sur étagère ou sur-mesure</p>
@@ -780,7 +780,7 @@ const HomePage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <h3 className="text-3xl font-bold mb-4 text-white">
+                <h3 className="text-2xl font-bold mb-4 text-white">
                   Polaris IA
                 </h3>
                 <p className="text-blue-100 mb-6 text-lg max-w-md">

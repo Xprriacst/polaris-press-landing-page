@@ -28,7 +28,7 @@ const FormationIA03 = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-600 to-green-600 bg-clip-text text-transparent">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               IA03 - Éditions et automatisation de vidéos
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -40,17 +40,17 @@ const FormationIA03 = () => {
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             <div className="bg-white backdrop-blur-sm rounded-xl p-6 border border-gray-200 shadow-lg">
               <Clock className="h-8 w-8 text-cyan-600 mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Durée</h3>
+              <h3 className="text-lg font-semibold mb-4">Durée</h3>
               <p className="text-gray-600">2 heures</p>
             </div>
             <div className="bg-white backdrop-blur-sm rounded-xl p-6 border border-gray-200 shadow-lg">
               <Users className="h-8 w-8 text-green-600 mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Participants</h3>
+              <h3 className="text-lg font-semibold mb-4">Participants</h3>
               <p className="text-gray-600">8-12 personnes</p>
             </div>
             <div className="bg-white backdrop-blur-sm rounded-xl p-6 border border-gray-200 shadow-lg">
               <Target className="h-8 w-8 text-yellow-400 mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Prérequis</h3>
+              <h3 className="text-lg font-semibold mb-4">Prérequis</h3>
               <p className="text-gray-600">Aucun prérequis</p>
             </div>
           </div>
