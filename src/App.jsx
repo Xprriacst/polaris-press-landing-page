@@ -176,25 +176,8 @@ const HomePage = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16 relative"
+            className="text-center mb-16"
           >
-            {/* Badge statistique en haut à droite */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="absolute top-0 right-0 md:right-16 bg-gradient-to-r from-orange-100 to-yellow-100 rounded-2xl p-4 border border-orange-200 shadow-lg max-w-xs"
-            >
-              <div className="flex items-center space-x-2 mb-2">
-                <TrendingUp className="h-5 w-5 text-orange-600" />
-                <span className="font-bold text-orange-800">80%</span>
-              </div>
-              <p className="text-sm text-gray-700 leading-tight">
-                des journalistes utilisent déjà ChatGPT ou des outils similaires
-              </p>
-              <p className="text-xs text-gray-500 mt-1">Source : Reuters Institute, 2024</p>
-            </motion.div>
-
             <h2 className="text-4xl md:text-6xl font-bold mb-6 text-gray-900 max-w-4xl mx-auto leading-tight">
               Pourquoi former vos équipes à l'
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -202,9 +185,26 @@ const HomePage = () => {
               </span>
               ?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
               L'IA générative transforme le journalisme. Anticipez le changement plutôt que de le subir.
             </p>
+            
+            {/* Badge statistique centré sous le sous-titre */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="inline-flex items-center bg-gradient-to-r from-orange-100 to-yellow-100 rounded-2xl px-6 py-4 border border-orange-200 shadow-lg"
+            >
+              <TrendingUp className="h-5 w-5 text-orange-600 mr-3" />
+              <div className="text-left">
+                <div className="flex items-center space-x-2">
+                  <span className="font-bold text-2xl text-orange-800">80%</span>
+                  <span className="text-gray-700">des journalistes utilisent déjà ChatGPT ou des outils similaires</span>
+                </div>
+                <p className="text-xs text-gray-500 mt-1">Source : Reuters Institute, 2024</p>
+              </div>
+            </motion.div>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
