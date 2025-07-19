@@ -188,10 +188,7 @@ const HomePage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
               className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-blue-500 transition-all duration-300 cursor-pointer"
-              onClick={() => {
-                navigate('/formation-ia01');
-                window.scrollTo(0, 0);
-              }}
+              onClick={() => navigate('/formation-ia01')}
             >
               <FileText className="h-12 w-12 text-blue-400 mb-6" />
               <h3 className="text-2xl font-bold mb-4 text-white">IA01 – Rédaction & retranscription</h3>
@@ -204,10 +201,7 @@ const HomePage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-purple-500 transition-all duration-300 cursor-pointer"
-              onClick={() => {
-                navigate('/formation-ia02');
-                window.scrollTo(0, 0);
-              }}
+              onClick={() => navigate('/formation-ia02')}
             >
               <Brain className="h-12 w-12 text-purple-400 mb-6" />
               <h3 className="text-2xl font-bold mb-4 text-white">IA02 – Images générées & améliorées</h3>
@@ -220,10 +214,7 @@ const HomePage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-cyan-500 transition-all duration-300 cursor-pointer"
-              onClick={() => {
-                navigate('/formation-ia03');
-                window.scrollTo(0, 0);
-              }}
+              onClick={() => navigate('/formation-ia03')}
             >
               <Video className="h-12 w-12 text-cyan-400 mb-6" />
               <h3 className="text-2xl font-bold mb-4 text-white">IA03 – Automatisation vidéo</h3>
@@ -239,10 +230,7 @@ const HomePage = () => {
             className="mt-16 text-center"
           >
             <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl p-8 border border-blue-500/20 cursor-pointer hover:border-blue-500/40 transition-all duration-300"
-                 onClick={() => {
-                   navigate('/formation-sur-mesure');
-                   window.scrollTo(0, 0);
-                 }}>
+                 onClick={() => navigate('/formation-sur-mesure')}>
               <h3 className="text-2xl font-bold mb-4 text-white">Formation sur mesure</h3>
               <p className="text-gray-400 mb-6 max-w-3xl mx-auto">
                 À la suite de notre audit, nous co-construisons des parcours adaptés à vos besoins : cas pratiques issus de vos propres contenus, 
