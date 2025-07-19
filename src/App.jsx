@@ -8,6 +8,8 @@ import { BentoGrid, BentoGridItem } from './components/ui/bento-grid';
 import { Button } from './components/ui/moving-border';
 import ContactForm from './components/ContactForm';
 import AnimatedGradientText from './components/ui/animated-gradient-text';
+import AnimatedCounter from './components/ui/animated-counter';
+import CompassLogo from './components/ui/compass-logo';
 import FormationIA01 from './pages/FormationIA01';
 import FormationIA02 from './pages/FormationIA02';
 import FormationIA03 from './pages/FormationIA03';
@@ -24,7 +26,12 @@ import {
   Shield, 
   Heart, 
   Crown, 
-  Target 
+  Target,
+  Lightbulb,
+  TrendingUp,
+  Zap,
+  AlertTriangle,
+  ExternalLink
 } from 'lucide-react';
 
 const HomePage = () => {
@@ -46,6 +53,15 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-white text-gray-900 relative overflow-hidden">
+      {/* Logo fixe en haut à gauche */}
+      <div className="fixed top-4 left-4 z-50">
+        <div className="flex items-center space-x-3 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg border border-gray-200">
+          <CompassLogo className="h-8 w-8" />
+          <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            Polaris IA
+          </span>
+        </div>
+      </div>
       <FloatingNav navItems={navItems} />
       
       {/* Hero Section */}
@@ -58,13 +74,13 @@ const HomePage = () => {
           >
             <TextGenerateEffect 
               words="Polaris IA" 
-              className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent"
+              className="text-8xl md:text-9xl lg:text-[12rem] font-black mb-8 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent leading-none"
             />
-            <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-gray-600">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-gray-800 max-w-5xl mx-auto leading-tight">
               L'intelligence artificielle générative au service des rédactions
             </h2>
-            <p className="text-lg md:text-xl text-gray-500 max-w-3xl mx-auto mb-12">
-              Notre mission : transformer l'IA en levier de performance éditoriale, sans compromis sur la rigueur journalistique.
+            <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto mb-12 leading-relaxed">
+              Transformez l'IA en levier de performance éditoriale, sans compromis sur la rigueur journalistique.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <button 
@@ -80,6 +96,232 @@ const HomePage = () => {
                 Prendre rendez-vous
               </button>
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Chiffres Clés Section */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+              Des résultats <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">mesurables</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              L'impact concret de l'IA sur la productivité journalistique
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="p-8 rounded-2xl shadow-xl bg-blue-50 border border-blue-100 hover:shadow-2xl transition-all duration-300 hover:scale-105"
+            >
+              <AnimatedCounter 
+                end="4h" 
+                duration={2.5}
+                className="text-6xl font-black text-blue-700 mb-3"
+              />
+              <div className="font-bold text-xl text-gray-900 mb-2">gagnées</div>
+              <div className="text-gray-600 mb-4">sur un article moyen</div>
+              <div className="text-xs text-gray-400 flex items-center">
+                Source : <a href="https://www.journalism.ai" target="_blank" rel="noopener" className="ml-1 text-blue-600 hover:text-blue-800 flex items-center">
+                  JournalismAI <ExternalLink className="h-3 w-3 ml-1" />
+                </a>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="p-8 rounded-2xl shadow-xl bg-purple-50 border border-purple-100 hover:shadow-2xl transition-all duration-300 hover:scale-105"
+            >
+              <AnimatedCounter 
+                end="x4" 
+                duration={2.5}
+                className="text-6xl font-black text-purple-700 mb-3"
+              />
+              <div className="font-bold text-xl text-gray-900 mb-2">audio plus rapide</div>
+              <div className="text-gray-600 mb-4">Retranscription d'interview</div>
+              <div className="text-xs text-gray-400">Source : Associated Press</div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="p-8 rounded-2xl shadow-xl bg-green-50 border border-green-100 hover:shadow-2xl transition-all duration-300 hover:scale-105"
+            >
+              <AnimatedCounter 
+                end="95%" 
+                duration={2.5}
+                className="text-6xl font-black text-green-700 mb-3"
+              />
+              <div className="font-bold text-xl text-gray-900 mb-2">d'économie</div>
+              <div className="text-gray-600 mb-4">sur les visuels illustratifs</div>
+              <div className="text-xs text-gray-400">Source : Accenture</div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pourquoi Former Section */}
+      <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16 relative"
+          >
+            {/* Badge statistique en haut à droite */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="absolute top-0 right-0 md:right-16 bg-gradient-to-r from-orange-100 to-yellow-100 rounded-2xl p-4 border border-orange-200 shadow-lg max-w-xs"
+            >
+              <div className="flex items-center space-x-2 mb-2">
+                <TrendingUp className="h-5 w-5 text-orange-600" />
+                <span className="font-bold text-orange-800">80%</span>
+              </div>
+              <p className="text-sm text-gray-700 leading-tight">
+                des journalistes utilisent déjà ChatGPT ou des outils similaires
+              </p>
+              <p className="text-xs text-gray-500 mt-1">Source : Reuters Institute, 2024</p>
+            </motion.div>
+
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-gray-900 max-w-4xl mx-auto leading-tight">
+              Pourquoi former vos équipes à l'
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                IA Générative
+              </span>
+              ?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              L'IA générative transforme le journalisme. Anticipez le changement plutôt que de le subir.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+            >
+              <motion.div 
+                className="mb-4"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Shield className="h-12 w-12 text-blue-600" />
+              </motion.div>
+              <h3 className="text-xl font-bold mb-3 text-gray-900">Réduire les inquiétudes</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Démystifier l'IA, comprendre ses limites et maîtriser les bonnes pratiques pour une utilisation sereine.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+            >
+              <motion.div 
+                className="mb-4"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Zap className="h-12 w-12 text-green-600" />
+              </motion.div>
+              <h3 className="text-xl font-bold mb-3 text-gray-900">Gagner en efficacité</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Automatiser les tâches répétitives pour se concentrer sur l'enquête, l'analyse et la création de valeur.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+            >
+              <motion.div 
+                className="mb-4"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                transition={{ duration: 0.3 }}
+              >
+                <TrendingUp className="h-12 w-12 text-purple-600" />
+              </motion.div>
+              <h3 className="text-xl font-bold mb-3 text-gray-900">Rester compétitif</h3>
+              <p className="text-gray-600 leading-relaxed">
+                S'adapter aux nouvelles méthodes de travail et maintenir son avantage concurrentiel dans un secteur en mutation.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+            >
+              <motion.div 
+                className="mb-4"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                transition={{ duration: 0.3 }}
+              >
+                <AlertTriangle className="h-12 w-12 text-red-600" />
+              </motion.div>
+              <h3 className="text-xl font-bold mb-3 text-gray-900">Réduire les risques</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Éviter les erreurs factuelles, les biais et les problèmes déontologiques liés à un usage non maîtrisé.
+              </p>
+            </motion.div>
+          </div>
+
+          {/* Note sur les hallucinations */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg max-w-4xl mx-auto mb-8"
+          >
+            <div className="flex items-start space-x-3">
+              <Lightbulb className="h-5 w-5 text-yellow-600 mt-1 flex-shrink-0" />
+              <div>
+                <p className="text-sm text-gray-700 italic leading-relaxed">
+                  <strong>Qu'est-ce qu'une hallucination IA ?</strong> Lorsqu'une IA génère des informations fausses mais présentées de manière convaincante. 
+                  Par exemple, en mai 2023, The Irish Times a dû retirer un article entier après avoir découvert qu'il avait été généré par ChatGPT 
+                  et contenait plusieurs inexactitudes factuelles.
+                </p>
+                <p className="text-xs text-gray-500 mt-2">Source : The Irish Times, mai 2023</p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="text-center"
+          >
+            <button 
+              onClick={() => scrollToSection('formations')}
+              className="px-8 py-4 rounded-full bg-gradient-to-r from-blue-600 to-purple-700 text-white font-semibold hover:from-blue-700 hover:to-purple-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-lg"
+            >
+              Découvrir nos formations
+            </button>
           </motion.div>
         </div>
       </section>
