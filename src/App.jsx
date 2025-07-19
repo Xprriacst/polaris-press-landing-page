@@ -72,13 +72,9 @@ const HomePage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <TextGenerateEffect 
-              words="Polaris IA" 
-              className="text-8xl md:text-9xl lg:text-[12rem] font-black mb-8 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent leading-none"
-            />
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-gray-800 max-w-5xl mx-auto leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-gray-800 max-w-5xl mx-auto leading-tight">
               L'intelligence artificielle générative au service des rédactions
-            </h2>
+            </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto mb-12 leading-relaxed">
               Transformez l'IA en levier de performance éditoriale, sans compromis sur la rigueur journalistique.
             </p>
