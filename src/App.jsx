@@ -101,39 +101,67 @@ const HomePage = () => {
             </p>
           </motion.div>
 
-          <BentoGrid className="max-w-4xl mx-auto">
-            <BentoGridItem
-              title="Audit IA"
-              description="Diagnostiquer. Comprendre. Agir. Une vision objective de l'usage de l'IA dans votre rédaction avec une feuille de route priorisée."
-              header={
-                <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100 overflow-hidden">
-                  <img src="/ai-brain.webp" alt="Audit IA" className="w-full h-full object-cover" />
-                </div>
-              }
-              icon={<CheckCircle className="h-4 w-4 text-neutral-500" />}
-              className="md:col-span-2"
-            />
-            <BentoGridItem
-              title="Formations IA"
-              description="Des modules concrets pour des résultats immédiats. Formations conçues par et pour les journalistes."
-              header={
-                <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100 overflow-hidden">
-                  <img src="/journalism-ai.jpg" alt="Formations IA" className="w-full h-full object-cover" />
-                </div>
-              }
-              icon={<GraduationCap className="h-4 w-4 text-neutral-500" />}
-            />
-            <BentoGridItem
-              title="Accompagnement"
-              description="Conseil personnalisé et suivi post-formation pour une adoption réussie de l'IA dans vos processus éditoriaux."
-              header={
-                <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100 overflow-hidden">
-                  <img src="/ai-writing.jpg" alt="Accompagnement" className="w-full h-full object-cover" />
-                </div>
-              }
-              icon={<Users className="h-4 w-4 text-neutral-500" />}
-            />
-          </BentoGrid>
+          <div className="grid md:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300"
+            >
+              <div className="flex items-center mb-6">
+                <CheckCircle className="h-12 w-12 text-blue-400 mr-4" />
+                <h3 className="text-2xl font-bold text-white">Audit IA</h3>
+              </div>
+              <p className="text-gray-300 mb-6">
+                Diagnostiquer. Comprendre. Agir. Une vision objective de l'usage de l'IA dans votre rédaction avec une feuille de route priorisée.
+              </p>
+              <div className="bg-blue-500/20 rounded-lg p-4">
+                <p className="text-blue-300 font-semibold">✓ État des lieux complet</p>
+                <p className="text-blue-300 font-semibold">✓ Recommandations personnalisées</p>
+                <p className="text-blue-300 font-semibold">✓ Feuille de route priorisée</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="bg-gradient-to-br from-purple-500/10 to-cyan-500/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300"
+            >
+              <div className="flex items-center mb-6">
+                <GraduationCap className="h-12 w-12 text-purple-400 mr-4" />
+                <h3 className="text-2xl font-bold text-white">Formations IA</h3>
+              </div>
+              <p className="text-gray-300 mb-6">
+                Des modules concrets pour des résultats immédiats. Formations conçues par et pour les journalistes.
+              </p>
+              <div className="bg-purple-500/20 rounded-lg p-4">
+                <p className="text-purple-300 font-semibold">✓ Modules pratiques et opérationnels</p>
+                <p className="text-purple-300 font-semibold">✓ Cas d'usage journalistiques réels</p>
+                <p className="text-purple-300 font-semibold">✓ Support et ressources inclus</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="bg-gradient-to-br from-cyan-500/10 to-green-500/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300"
+            >
+              <div className="flex items-center mb-6">
+                <Users className="h-12 w-12 text-cyan-400 mr-4" />
+                <h3 className="text-2xl font-bold text-white">Accompagnement</h3>
+              </div>
+              <p className="text-gray-300 mb-6">
+                Conseil personnalisé et suivi post-formation pour une adoption réussie de l'IA dans vos processus éditoriaux.
+              </p>
+              <div className="bg-cyan-500/20 rounded-lg p-4">
+                <p className="text-cyan-300 font-semibold">✓ Suivi personnalisé post-formation</p>
+                <p className="text-cyan-300 font-semibold">✓ Intégration dans vos workflows</p>
+                <p className="text-cyan-300 font-semibold">✓ Support technique continu</p>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -160,7 +188,10 @@ const HomePage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
               className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-blue-500 transition-all duration-300 cursor-pointer"
-              onClick={() => navigate('/formation-ia01')}
+              onClick={() => {
+                navigate('/formation-ia01');
+                window.scrollTo(0, 0);
+              }}
             >
               <FileText className="h-12 w-12 text-blue-400 mb-6" />
               <h3 className="text-2xl font-bold mb-4 text-white">IA01 – Rédaction & retranscription</h3>
@@ -173,7 +204,10 @@ const HomePage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-purple-500 transition-all duration-300 cursor-pointer"
-              onClick={() => navigate('/formation-ia02')}
+              onClick={() => {
+                navigate('/formation-ia02');
+                window.scrollTo(0, 0);
+              }}
             >
               <Brain className="h-12 w-12 text-purple-400 mb-6" />
               <h3 className="text-2xl font-bold mb-4 text-white">IA02 – Images générées & améliorées</h3>
@@ -186,7 +220,10 @@ const HomePage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-cyan-500 transition-all duration-300 cursor-pointer"
-              onClick={() => navigate('/formation-ia03')}
+              onClick={() => {
+                navigate('/formation-ia03');
+                window.scrollTo(0, 0);
+              }}
             >
               <Video className="h-12 w-12 text-cyan-400 mb-6" />
               <h3 className="text-2xl font-bold mb-4 text-white">IA03 – Automatisation vidéo</h3>
@@ -202,7 +239,10 @@ const HomePage = () => {
             className="mt-16 text-center"
           >
             <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl p-8 border border-blue-500/20 cursor-pointer hover:border-blue-500/40 transition-all duration-300"
-                 onClick={() => navigate('/formation-sur-mesure')}>
+                 onClick={() => {
+                   navigate('/formation-sur-mesure');
+                   window.scrollTo(0, 0);
+                 }}>
               <h3 className="text-2xl font-bold mb-4 text-white">Formation sur mesure</h3>
               <p className="text-gray-400 mb-6 max-w-3xl mx-auto">
                 À la suite de notre audit, nous co-construisons des parcours adaptés à vos besoins : cas pratiques issus de vos propres contenus, 
@@ -242,16 +282,22 @@ const HomePage = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <blockquote className="text-3xl md:text-4xl font-bold text-white mb-8 italic">
-                "L'IA ne remplacera pas le journaliste, elle l'assistera."
-              </blockquote>
+              <div className="text-3xl md:text-4xl font-bold text-white mb-8">
+                <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                  Notre conviction :
+                </span>
+                <br />
+                <span className="text-white">
+                  L'IA ne remplace pas le journaliste, elle l'assiste
+                </span>
+              </div>
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <Shield className="h-8 w-8 text-green-400 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="text-xl font-semibold mb-2 text-white">Contrôle éditorial final</h3>
-                    <p className="text-gray-400">Aucun contenu généré n'est publié sans validation humaine.</p>
+                    <p className="text-gray-400 leading-relaxed">Aucun contenu généré n'est publié sans validation humaine.</p>
                   </div>
                 </div>
                 
@@ -259,7 +305,7 @@ const HomePage = () => {
                   <Heart className="h-8 w-8 text-red-400 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="text-xl font-semibold mb-2 text-white">Approche éthique</h3>
-                    <p className="text-gray-400">Intégration des enjeux éthiques, déontologiques et syndicaux dès la conception.</p>
+                    <p className="text-gray-400 leading-relaxed">Intégration des enjeux éthiques, déontologiques et syndicaux dès la conception.</p>
                   </div>
                 </div>
                 
@@ -267,7 +313,7 @@ const HomePage = () => {
                   <Crown className="h-8 w-8 text-yellow-400 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="text-xl font-semibold mb-2 text-white">Souveraineté des rédactions</h3>
-                    <p className="text-gray-400">Transparence, qualité de l'information et indépendance face aux technologies.</p>
+                    <p className="text-gray-400 leading-relaxed">Transparence, qualité de l'information et indépendance face aux technologies.</p>
                   </div>
                 </div>
               </div>
