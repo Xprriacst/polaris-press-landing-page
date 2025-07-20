@@ -54,8 +54,8 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-white text-gray-900 relative overflow-hidden">
-      {/* Logo fixe en haut à gauche */}
-      <div className="fixed top-4 left-4 z-50">
+      {/* Logo fixe en haut à gauche - masqué en mobile car présent dans FloatingNav */}
+      <div className="hidden sm:block fixed top-4 left-4 z-50">
         <div className="flex items-center space-x-3 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg border border-gray-200">
           <CompassLogo className="h-8 w-8" />
           <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">

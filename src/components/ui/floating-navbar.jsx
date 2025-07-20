@@ -30,9 +30,12 @@ export const FloatingNav = ({
           className
         )}
       >
-        {/* Logo visible on mobile */}
-        <div className="flex items-center">
+        {/* Logo + nom visible sur mobile */}
+        <div className="flex sm:hidden items-center space-x-2">
           <CompassLogo className="h-6 w-6 text-blue-600" />
+          <span className="text-sm font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            Polaris IA
+          </span>
         </div>
         
         {/* Menu icon visible on mobile */}
