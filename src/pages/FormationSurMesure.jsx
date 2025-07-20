@@ -217,20 +217,30 @@ const FormationSurMesure = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Button
-                borderRadius="1.75rem"
-                className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800"
-              >
-                Demander un audit
-              </Button>
-              <button className="px-8 py-4 rounded-full border border-gray-300 text-gray-700 hover:bg-gray-900 hover:text-white transition-all duration-300">
-                Prendre rendez-vous
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    <Footer />
-    </div>
+  borderRadius="1.75rem"
+  className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800"
+>
+  Demander un audit
+</Button>
+<button
+  className="px-8 py-4 rounded-full border border-gray-300 text-gray-900 hover:bg-gray-900 hover:text-white transition-all duration-300 shadow-sm"
+  onClick={() => {
+    if (window.location.pathname !== '/') {
+      window.location.href = '/#contact';
+    } else {
+      const el = document.getElementById('contact');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+  }}
+>
+  Prendre rendez-vous
+</button>
+</div>
+</motion.div>
+</div>
+</section>
+<Footer />
+</div>
   );
 };
 

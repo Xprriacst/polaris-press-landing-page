@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Menu } from "lucide-react";
+import CompassLogo from "./compass-logo";
 
 export const FloatingNav = ({
   navItems,
   className,
+  onContactClick
 }) => {
   const [visible, setVisible] = useState(true);
 
@@ -24,14 +26,18 @@ export const FloatingNav = ({
           duration: 0.2,
         }}
         className={cn(
-          "flex max-w-fit fixed top-10 inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full dark:bg-black bg-white shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] pr-2 pl-8 py-2 items-center justify-center space-x-4",
+          "flex max-w-[95%] sm:max-w-fit fixed top-4 sm:top-6 inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full dark:bg-black bg-white shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] px-4 sm:px-6 py-2 items-center justify-between sm:justify-center space-x-2 sm:space-x-4",
           className
         )}
       >
+        {/* Logo visible on mobile */}
+        <div className="flex items-center">
+          <CompassLogo className="h-6 w-6 text-blue-600" />
+        </div>
+        
         {/* Menu icon visible on mobile */}
         <div className="flex sm:hidden items-center">
-          <Menu className="h-4 w-4 text-neutral-600 dark:text-neutral-50 mr-2" />
-          <span className="text-sm text-neutral-600 dark:text-neutral-50">Menu</span>
+          <Menu className="h-5 w-5 text-neutral-600 dark:text-neutral-50" />
         </div>
         
         {/* Navigation items - hidden on mobile, visible on desktop */}
@@ -51,12 +57,12 @@ export const FloatingNav = ({
         </div>
         
         <button
-  className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full"
-  onClick={typeof onContactClick === 'function' ? onContactClick : undefined}
->
-  <span>Contact</span>
-  <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px" />
-</button>
+          className="hidden sm:block border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full"
+          onClick={onContactClick}
+        >
+          <span>Contact</span>
+          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px" />
+        </button>
       </motion.div>
     </AnimatePresence>
   );

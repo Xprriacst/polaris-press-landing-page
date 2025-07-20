@@ -38,10 +38,10 @@ const Footer = () => (
           >
             <h4 className="text-xl font-semibold mb-6 text-white">Services</h4>
             <ul className="space-y-3 text-blue-100">
-              <li><a href="#services" className="hover:text-white transition-colors">Audit IA</a></li>
-              <li><a href="#formations" className="hover:text-white transition-colors">Formations IA</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Accompagnement</a></li>
-              <li><a href="#contact" className="hover:text-white transition-colors">Formation sur mesure</a></li>
+              <li><a href="/#services" className="hover:text-white transition-colors">Audit IA</a></li>
+              <li><a href="/#formations" className="hover:text-white transition-colors">Formations IA</a></li>
+              <li><a href="/#services" className="hover:text-white transition-colors">Accompagnement</a></li>
+              <li><a href="/#contact" className="hover:text-white transition-colors">Formation sur mesure</a></li>
             </ul>
           </motion.div>
         </div>
@@ -55,10 +55,10 @@ const Footer = () => (
           >
             <h4 className="text-xl font-semibold mb-6 text-white">Informations</h4>
             <ul className="space-y-3 text-blue-100">
-              <li><a href="#about" className="hover:text-white transition-colors">Nos engagements</a></li>
-              <li><a href="#references" className="hover:text-white transition-colors">Nos références</a></li>
-              <li><a href="#faq" className="hover:text-white transition-colors">FAQ</a></li>
-              <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
+              <li><a href="/#about" className="hover:text-white transition-colors">Nos engagements</a></li>
+              <li><a href="/#references" className="hover:text-white transition-colors">Nos références</a></li>
+              <li><a href="/#faq" className="hover:text-white transition-colors">FAQ</a></li>
+              <li><a href="/#contact" className="hover:text-white transition-colors">Contact</a></li>
             </ul>
           </motion.div>
         </div>
@@ -74,9 +74,9 @@ const Footer = () => (
         <div className="flex flex-col md:flex-row justify-between items-center text-blue-100">
           <p>© 2024 Polaris IA. Tous droits réservés.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white transition-colors">Mentions légales</a>
-            <a href="#" className="hover:text-white transition-colors">Politique de confidentialité</a>
-            <a href="#" className="hover:text-white transition-colors">CGV</a>
+            <a href="/mentions-legales" className="hover:text-white transition-colors">Mentions légales</a>
+            <a href="/politique-confidentialite" className="hover:text-white transition-colors">Politique de confidentialité</a>
+            <a href="/cgv" className="hover:text-white transition-colors">CGV</a>
           </div>
         </div>
       </motion.div>

@@ -185,7 +185,17 @@ const FormationIA02 = () => {
               >
                 S'inscrire à la formation
               </Button>
-              <button className="px-8 py-4 rounded-full border border-gray-300 text-gray-900 hover:bg-gray-100 hover:border-gray-400 transition-all duration-300 shadow-sm">
+              <button
+  className="px-8 py-4 rounded-full border border-gray-300 text-gray-900 hover:bg-gray-100 hover:border-gray-400 transition-all duration-300 shadow-sm"
+  onClick={() => {
+    if (window.location.pathname !== '/') {
+      window.location.href = '/#contact';
+    } else {
+      const el = document.getElementById('contact');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+  }}
+>
                 Demander plus d'informations
               </button>
             </div>

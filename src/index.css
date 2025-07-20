@@ -87,7 +87,13 @@
   animation: gradient 3s ease infinite;
 }
 
-/* Smooth scrolling */
+/* Smooth scrolling and anchor offset for fixed header */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* Ajustez cette valeur selon la hauteur de votre header */
+}
+
+/* Alternative pour les navigateurs qui ne supportent pas scroll-padding */
+[id] {
+  scroll-margin-top: 6rem; /* Légèrement plus grand que le scroll-padding pour plus de sécurité */
 }

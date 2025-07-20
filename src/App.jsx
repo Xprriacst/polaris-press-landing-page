@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Sparkles } from './components/ui/sparkles';
 import { FloatingNav } from './components/ui/floating-navbar';
@@ -39,10 +39,10 @@ const HomePage = () => {
   const navigate = useNavigate();
 
   const navItems = [
-    { name: "Accueil", link: "#home" },
-    { name: "Services", link: "#services" },
-    { name: "Formations", link: "#formations" },
-    { name: "À propos", link: "#about" },
+    { name: "Accueil", link: "/#home" },
+    { name: "Services", link: "/#services" },
+    { name: "Formations", link: "/#formations" },
+    { name: "À propos", link: "/#about" },
   ];
 
   const scrollToSection = (sectionId) => {
@@ -804,10 +804,10 @@ const HomePage = () => {
               >
                 <h4 className="text-xl font-semibold mb-6 text-white">Services</h4>
                 <ul className="space-y-3 text-blue-100">
-                  <li><a href="#services" className="hover:text-white transition-colors">Audit IA</a></li>
-                  <li><a href="#formations" className="hover:text-white transition-colors">Formations IA</a></li>
-                  <li><a href="#services" className="hover:text-white transition-colors">Accompagnement</a></li>
-                  <li><a href="#contact" className="hover:text-white transition-colors">Formation sur mesure</a></li>
+                  <li><a href="/#services" className="hover:text-white transition-colors">Audit IA</a></li>
+                  <li><a href="/#formations" className="hover:text-white transition-colors">Formations IA</a></li>
+                  <li><a href="/#services" className="hover:text-white transition-colors">Accompagnement</a></li>
+                  <li><a href="/#contact" className="hover:text-white transition-colors">Formation sur mesure</a></li>
                 </ul>
               </motion.div>
             </div>
@@ -821,10 +821,10 @@ const HomePage = () => {
               >
                 <h4 className="text-xl font-semibold mb-6 text-white">Informations</h4>
                 <ul className="space-y-3 text-blue-100">
-                  <li><a href="#about" className="hover:text-white transition-colors">Nos engagements</a></li>
-                  <li><a href="#references" className="hover:text-white transition-colors">Nos références</a></li>
-                  <li><a href="#faq" className="hover:text-white transition-colors">FAQ</a></li>
-                  <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
+                  <li><a href="/#about" className="hover:text-white transition-colors">Nos engagements</a></li>
+                  <li><a href="/#references" className="hover:text-white transition-colors">Nos références</a></li>
+                  <li><a href="/#faq" className="hover:text-white transition-colors">FAQ</a></li>
+                  <li><a href="/#contact" className="hover:text-white transition-colors">Contact</a></li>
                 </ul>
               </motion.div>
             </div>
@@ -840,9 +840,9 @@ const HomePage = () => {
             <div className="flex flex-col md:flex-row justify-between items-center text-blue-100">
               <p>© 2024 Polaris IA. Tous droits réservés.</p>
               <div className="flex space-x-6 mt-4 md:mt-0">
-                <a href="#" className="hover:text-white transition-colors">Mentions légales</a>
-                <a href="#" className="hover:text-white transition-colors">Politique de confidentialité</a>
-                <a href="#" className="hover:text-white transition-colors">CGV</a>
+                <a href="/mentions-legales" className="hover:text-white transition-colors">Mentions légales</a>
+                <a href="/politique-confidentialite" className="hover:text-white transition-colors">Politique de confidentialité</a>
+                <a href="/cgv" className="hover:text-white transition-colors">CGV</a>
               </div>
             </div>
           </motion.div>
@@ -853,9 +853,47 @@ const HomePage = () => {
 };
 
 function App() {
+  // Désactiver la restauration automatique du défilement du navigateur
+  React.useLayoutEffect(() => {
+    // Désactiver la restauration automatique du navigateur
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+
+    // S'assurer que la page est tout en haut au chargement initial
+    window.scrollTo(0, 0);
+
+    // Nettoyage
+    return () => {
+      if ('scrollRestoration' in window.history) {
+        window.history.scrollRestoration = 'auto';
+      }
+    };
+  }, []);
+
+  // Gestion du défilement personnalisée pour les changements de route
+  const location = useLocation();
+  
+  React.useEffect(() => {
+    // S'assurer que le défilement est en haut pour chaque changement de route
+    window.scrollTo(0, 0);
+    
+    // Si l'URL contient un hash, faire défiler jusqu'à l'élément correspondant
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      const element = document.getElementById(id);
+      
+      if (element) {
+        // Petit délai pour s'assurer que le composant est monté
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location]);
+
   return (
     <>
-      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/formation-ia01" element={<FormationIA01 />} />
