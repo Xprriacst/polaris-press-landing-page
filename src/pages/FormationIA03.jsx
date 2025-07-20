@@ -192,11 +192,7 @@ const FormationIA03 = () => {
           </motion.div>
         </div>
       </section>
-    </div>
-  );
-};
-
-      <Footer />
+    <Footer />
     </div>
   );
 };
