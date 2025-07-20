@@ -584,7 +584,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Nos Références Section */}
+      {/* Section Nos Références masquée temporairement
       <section id="references" className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -626,6 +626,7 @@ const HomePage = () => {
           </motion.div>
         </div>
       </section>
+      */}
 
       {/* FAQ Section */}
       <section id="faq" className="py-20 px-4 bg-gray-50">
