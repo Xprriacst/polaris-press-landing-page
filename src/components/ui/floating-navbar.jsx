@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import CompassLogo from "./compass-logo";
 
 export const FloatingNav = ({
@@ -10,6 +10,7 @@ export const FloatingNav = ({
   onContactClick
 }) => {
   const [visible, setVisible] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <AnimatePresence mode="wait">
@@ -39,9 +40,16 @@ export const FloatingNav = ({
         </div>
         
         {/* Menu icon visible on mobile */}
-        <div className="flex sm:hidden items-center">
-          <Menu className="h-5 w-5 text-neutral-600 dark:text-neutral-50" />
-        </div>
+        <button 
+          className="flex sm:hidden items-center p-1"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {isMenuOpen ? (
+            <X className="h-5 w-5 text-neutral-600 dark:text-neutral-50" />
+          ) : (
+            <Menu className="h-5 w-5 text-neutral-600 dark:text-neutral-50" />
+          )}
+        </button>
         
         {/* Navigation items - hidden on mobile, visible on desktop */}
         <div className="hidden sm:flex items-center space-x-4">
@@ -67,6 +75,41 @@ export const FloatingNav = ({
           <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px" />
         </button>
       </motion.div>
+      
+      {/* Menu mobile */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.2 }}
+            className="fixed top-16 left-4 right-4 bg-white dark:bg-black border border-neutral-200 dark:border-white/[0.2] rounded-2xl shadow-lg z-[5000] sm:hidden"
+          >
+            <div className="p-4 space-y-3">
+              {navItems.map((navItem, idx) => (
+                <a
+                  key={`mobile-link-${idx}`}
+                  href={navItem.link}
+                  className="block px-4 py-3 text-neutral-600 dark:text-neutral-50 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {navItem.name}
+                </a>
+              ))}
+              <button
+                className="w-full text-left px-4 py-3 text-neutral-600 dark:text-neutral-50 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg transition-colors"
+                onClick={() => {
+                  onContactClick();
+                  setIsMenuOpen(false);
+                }}
+              >
+                Contact
+              </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </AnimatePresence>
   );
 };
