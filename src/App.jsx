@@ -875,8 +875,8 @@ function App() {
   const location = useLocation();
   
   React.useEffect(() => {
-    // S'assurer que le défilement est en haut pour chaque changement de route
-    window.scrollTo(0, 0);
+    // S'assurer que le défilement est en haut pour chaque changement de route de manière instantanée
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     
     // Si l'URL contient un hash, faire défiler jusqu'à l'élément correspondant
     if (location.hash) {
