@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Clock, Users, Target, CheckCircle, Settings, Puzzle, Users2 } from 'lucide-react';
 import { Button } from '../components/ui/moving-border';
+import Footer from '../components/ui/Footer';
 
 const FormationSurMesure = () => {
   return (
@@ -228,6 +229,11 @@ const FormationSurMesure = () => {
           </motion.div>
         </div>
       </section>
+    </div>
+  );
+};
+
+      <Footer />
     </div>
   );
 };

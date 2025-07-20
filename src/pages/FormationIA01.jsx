@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Clock, Users, Target, CheckCircle, FileText, Mic } from 'lucide-react';
 import { Button } from '../components/ui/moving-border';
+import Footer from '../components/ui/Footer';
 
 const FormationIA01 = () => {
   return (
@@ -195,6 +196,11 @@ const FormationIA01 = () => {
           </motion.div>
         </div>
       </section>
+    </div>
+  );
+};
+
+      <Footer />
     </div>
   );
 };

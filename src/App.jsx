@@ -14,7 +14,7 @@ import FormationIA01 from './pages/FormationIA01';
 import FormationIA02 from './pages/FormationIA02';
 import FormationIA03 from './pages/FormationIA03';
 import FormationSurMesure from './pages/FormationSurMesure';
-import ScrollToTop from './components/ScrollToTop';
+
 import './App.css';
 import { 
   Search, 
@@ -63,7 +63,7 @@ const HomePage = () => {
           </span>
         </div>
       </div>
-      <FloatingNav navItems={navItems} />
+      <FloatingNav navItems={navItems} onContactClick={() => scrollToSection('contact')} />
       
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center relative px-4 bg-gradient-to-br from-blue-50 via-white to-purple-50">
@@ -129,9 +129,7 @@ const HomePage = () => {
               <div className="font-bold text-xl text-gray-900 mb-2">gagnées</div>
               <div className="text-gray-600 mb-4">sur un article moyen</div>
               <div className="text-xs text-gray-400 flex items-center">
-                Source : <a href="https://www.journalism.ai" target="_blank" rel="noopener" className="ml-1 text-blue-600 hover:text-blue-800 flex items-center">
-                  JournalismAI <ExternalLink className="h-3 w-3 ml-1" />
-                </a>
+                
               </div>
             </motion.div>
 
