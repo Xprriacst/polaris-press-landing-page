@@ -1,22 +1,16 @@
 import React from 'react';
-import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Sparkles } from './components/ui/sparkles';
-import { FloatingNav } from './components/ui/floating-navbar';
-import { TextGenerateEffect } from './components/ui/text-generate-effect';
-import { BentoGrid, BentoGridItem } from './components/ui/bento-grid';
-import { Button } from './components/ui/moving-border';
-import ContactForm from './components/ContactForm';
-import AnimatedGradientText from './components/ui/animated-gradient-text';
-import AnimatedCounter from './components/ui/animated-counter';
-import CompassLogo from './components/ui/compass-logo';
-import FormationIA01 from './pages/FormationIA01';
-import FormationIA02 from './pages/FormationIA02';
-import FormationIA03 from './pages/FormationIA03';
-import FormationSurMesure from './pages/FormationSurMesure';
-import PageAccueilPME from './pages/PageAccueilPME';
+import { Sparkles } from '../components/ui/sparkles';
+import { FloatingNav } from '../components/ui/floating-navbar';
+import { TextGenerateEffect } from '../components/ui/text-generate-effect';
+import { BentoGrid, BentoGridItem } from '../components/ui/bento-grid';
+import { Button } from '../components/ui/moving-border';
+import ContactForm from '../components/ContactForm';
+import AnimatedGradientText from '../components/ui/animated-gradient-text';
+import AnimatedCounter from '../components/ui/animated-counter';
+import CompassLogo from '../components/ui/compass-logo';
 
-import './App.css';
 import { 
   Search, 
   GraduationCap, 
@@ -33,17 +27,21 @@ import {
   TrendingUp,
   Zap,
   AlertTriangle,
-  ExternalLink
+  ExternalLink,
+  Building2,
+  BarChart3,
+  Clock,
+  Briefcase
 } from 'lucide-react';
 
-const HomePage = () => {
+const PageAccueilPME = () => {
   const navigate = useNavigate();
 
   const navItems = [
-    { name: "Accueil", link: "/#home" },
-    { name: "Services", link: "/#services" },
-    { name: "Formations", link: "/#formations" },
-    { name: "À propos", link: "/#about" },
+    { name: "Accueil", link: "/page-d-accueil#home" },
+    { name: "Services", link: "/page-d-accueil#services" },
+    { name: "Formations", link: "/page-d-accueil#formations" },
+    { name: "À propos", link: "/page-d-accueil#about" },
   ];
 
   const scrollToSection = (sectionId) => {
@@ -75,10 +73,10 @@ const HomePage = () => {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 max-w-5xl mx-auto leading-tight">
-              L'intelligence artificielle générative au service des rédactions
+              L'intelligence artificielle générative au service de votre PME
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto mb-12 leading-relaxed">
-              Transformez l'IA en levier de performance éditoriale, sans compromis sur la rigueur journalistique.
+              Transformez l'IA en levier de performance pour votre entreprise, sans compromis sur la qualité et l'efficacité.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <button 
@@ -111,7 +109,7 @@ const HomePage = () => {
               Des résultats <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">mesurables</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              L'impact concret de l'IA sur la productivité journalistique
+              L'impact concret de l'IA sur la productivité des PME
             </p>
           </motion.div>
 
@@ -123,15 +121,13 @@ const HomePage = () => {
               className="p-8 rounded-2xl shadow-xl bg-blue-50 border border-blue-100 hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
               <AnimatedCounter 
-                end="4h" 
+                end="40%" 
                 duration={2.5}
                 className="text-6xl font-black text-blue-700 mb-3"
               />
-              <div className="font-bold text-xl text-gray-900 mb-2">gagnées</div>
-              <div className="text-gray-600 mb-4">sur un article moyen</div>
-              <div className="text-xs text-gray-400 flex items-center">
-                
-              </div>
+              <div className="font-bold text-xl text-gray-900 mb-2">de temps gagné</div>
+              <div className="text-gray-600 mb-4">sur les tâches administratives</div>
+              <div className="text-xs text-gray-400">Source : McKinsey Global Institute</div>
             </motion.div>
 
             <motion.div
@@ -141,13 +137,13 @@ const HomePage = () => {
               className="p-8 rounded-2xl shadow-xl bg-purple-50 border border-purple-100 hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
               <AnimatedCounter 
-                end="x4" 
+                end="1h30" 
                 duration={2.5}
                 className="text-6xl font-black text-purple-700 mb-3"
               />
-              <div className="font-bold text-xl text-gray-900 mb-2">audio plus rapide</div>
-              <div className="text-gray-600 mb-4">Retranscription d'interview</div>
-              <div className="text-xs text-gray-400">Source : Associated Press</div>
+              <div className="font-bold text-xl text-gray-900 mb-2">économisées par jour</div>
+              <div className="text-gray-600 mb-4">et par collaborateur en moyenne</div>
+              <div className="text-xs text-gray-400">Source : Yes We Prompt 2025</div>
             </motion.div>
 
             <motion.div
@@ -157,13 +153,13 @@ const HomePage = () => {
               className="p-8 rounded-2xl shadow-xl bg-green-50 border border-green-100 hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
               <AnimatedCounter 
-                end="95%" 
+                end="54%" 
                 duration={2.5}
                 className="text-6xl font-black text-green-700 mb-3"
               />
-              <div className="font-bold text-xl text-gray-900 mb-2">d'économie</div>
-              <div className="text-gray-600 mb-4">sur les visuels illustratifs</div>
-              <div className="text-xs text-gray-400">Source : Accenture</div>
+              <div className="font-bold text-xl text-gray-900 mb-2">des PME interrogées</div>
+              <div className="text-gray-600 mb-4">déclarent amélioration efficacité</div>
+              <div className="text-xs text-gray-400">Source : Étude Gedia-McKinsey 2025</div>
             </motion.div>
           </div>
         </div>
@@ -179,14 +175,14 @@ const HomePage = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 max-w-4xl mx-auto leading-tight">
-              Pourquoi former vos équipes à l'
+              Pourquoi former votre équipe à l'
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 IA Générative
               </span>
               ?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              L'IA générative transforme le journalisme. Anticipez le changement plutôt que de le subir.
+              L'IA générative transforme le monde des affaires. Anticipez le changement plutôt que de le subir.
             </p>
             
             {/* Badge statistique centré sous le sous-titre */}
@@ -199,10 +195,10 @@ const HomePage = () => {
               <TrendingUp className="h-5 w-5 text-orange-600 mr-3" />
               <div className="text-left">
                 <div className="flex items-center space-x-2">
-                  <span className="font-bold text-2xl text-orange-800">80%</span>
-                  <span className="text-gray-700">des journalistes utilisent déjà ChatGPT ou des outils similaires</span>
+                  <span className="font-bold text-2xl text-orange-800">73%</span>
+                  <span className="text-gray-700">des dirigeants de PME considèrent l'IA comme prioritaire</span>
                 </div>
-                <p className="text-xs text-gray-500 mt-1">Source : Reuters Institute, 2024</p>
+                <p className="text-xs text-gray-500 mt-1">Source : Étude Deloitte PME, 2024</p>
               </div>
             </motion.div>
           </motion.div>
@@ -221,9 +217,9 @@ const HomePage = () => {
               >
                 <Shield className="h-12 w-12 text-blue-600" />
               </motion.div>
-              <h3 className="text-xl font-semibold mb-4 text-gray-900">Réduire les inquiétudes</h3>
+              <h3 className="text-xl font-semibold mb-4 text-gray-900">Réduire les coûts</h3>
               <p className="text-gray-600 leading-relaxed">
-                Démystifier l'IA, comprendre ses limites et maîtriser les bonnes pratiques pour une utilisation sereine.
+                Automatiser les tâches répétitives et réduire les coûts opérationnels grâce à une utilisation maîtrisée de l'IA.
               </p>
             </motion.div>
 
@@ -242,7 +238,7 @@ const HomePage = () => {
               </motion.div>
               <h3 className="text-xl font-semibold mb-4 text-gray-900">Gagner en efficacité</h3>
               <p className="text-gray-600 leading-relaxed">
-                Automatiser les tâches répétitives pour se concentrer sur l'enquête, l'analyse et la création de valeur.
+                Libérer du temps pour les activités à forte valeur ajoutée en automatisant les processus métier.
               </p>
             </motion.div>
 
@@ -261,7 +257,7 @@ const HomePage = () => {
               </motion.div>
               <h3 className="text-xl font-semibold mb-4 text-gray-900">Rester compétitif</h3>
               <p className="text-gray-600 leading-relaxed">
-                S'adapter aux nouvelles méthodes de travail et maintenir son avantage concurrentiel dans un secteur en mutation.
+                S'adapter aux nouvelles technologies et maintenir son avantage concurrentiel face aux entreprises transformées.
               </p>
             </motion.div>
 
@@ -278,14 +274,14 @@ const HomePage = () => {
               >
                 <AlertTriangle className="h-12 w-12 text-red-600" />
               </motion.div>
-              <h3 className="text-xl font-semibold mb-4 text-gray-900">Réduire les risques</h3>
+              <h3 className="text-xl font-semibold mb-4 text-gray-900">Éviter les risques</h3>
               <p className="text-gray-600 leading-relaxed">
-                Éviter les erreurs factuelles, les biais et les problèmes déontologiques liés à un usage non maîtrisé.
+                Former vos équipes pour éviter les erreurs coûteuses et les problèmes de conformité liés à l'IA.
               </p>
             </motion.div>
           </div>
 
-          {/* Note sur les hallucinations */}
+          {/* Note sur l'importance de la formation */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -296,11 +292,10 @@ const HomePage = () => {
               <Lightbulb className="h-5 w-5 text-yellow-600 mt-1 flex-shrink-0" />
               <div>
                 <p className="text-sm text-gray-700 italic leading-relaxed">
-                  <strong>Qu'est-ce qu'une hallucination IA ?</strong> Lorsqu'une IA génère des informations fausses mais présentées de manière convaincante. 
-                  Par exemple, en mai 2023, The Irish Times a dû retirer un article entier après avoir découvert qu'il avait été généré par ChatGPT 
-                  et contenait plusieurs inexactitudes factuelles.
+                  <strong>Pourquoi la formation est essentielle ?</strong> Selon une étude MIT, les entreprises qui forment leurs collaborateurs à l'IA 
+                  voient leur productivité augmenter de 14% en moyenne, contre seulement 3% pour celles qui adoptent l'IA sans formation préalable.
                 </p>
-                <p className="text-xs text-gray-500 mt-2">Source : The Irish Times, mai 2023</p>
+                <p className="text-xs text-gray-500 mt-2">Source : MIT Technology Review, 2024</p>
               </div>
             </div>
           </motion.div>
@@ -352,12 +347,12 @@ const HomePage = () => {
                 <h3 className="text-xl font-semibold text-gray-900">Audit IA</h3>
               </div>
               <p className="text-gray-600 mb-6">
-                Diagnostiquer. Comprendre. Agir. Une vision objective de l'usage de l'IA dans votre rédaction avec une feuille de route priorisée.
+                Diagnostiquer. Comprendre. Agir. Une vision objective de l'usage de l'IA dans votre entreprise avec une feuille de route priorisée.
               </p>
               <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
-                <p className="text-blue-700 font-semibold">✓ État des lieux complet</p>
-                <p className="text-blue-700 font-semibold">✓ Recommandations personnalisées</p>
-                <p className="text-blue-700 font-semibold">✓ Feuille de route priorisée</p>
+                <p className="text-blue-700 font-semibold">✓ Évaluation des processus métier</p>
+                <p className="text-blue-700 font-semibold">✓ Identification des cas d'usage prioritaires</p>
+                <p className="text-blue-700 font-semibold">✓ Plan de déploiement personnalisé</p>
               </div>
             </motion.div>
 
@@ -372,11 +367,11 @@ const HomePage = () => {
                 <h3 className="text-xl font-semibold text-gray-900">Formations IA</h3>
               </div>
               <p className="text-gray-600 mb-6">
-                Des modules concrets pour des résultats immédiats. Formations conçues par et pour les journalistes.
+                Des modules concrets pour des résultats immédiats. Formations conçues pour les équipes de PME.
               </p>
               <div className="bg-purple-50 rounded-lg p-4 border border-purple-100">
                 <p className="text-purple-700 font-semibold">✓ Modules pratiques et opérationnels</p>
-                <p className="text-purple-700 font-semibold">✓ Cas d'usage journalistiques réels</p>
+                <p className="text-purple-700 font-semibold">✓ Cas d'usage métier adaptés aux PME</p>
                 <p className="text-purple-700 font-semibold">✓ Support et ressources inclus</p>
               </div>
             </motion.div>
@@ -388,16 +383,16 @@ const HomePage = () => {
               className="bg-white backdrop-blur-sm rounded-2xl p-8 border border-cyan-200 hover:border-cyan-300 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <div className="flex items-center mb-6">
-                <Users className="h-12 w-12 text-cyan-600 mr-4" />
-                <h3 className="text-xl font-semibold text-gray-900">Accompagnement</h3>
+                <Zap className="h-12 w-12 text-cyan-600 mr-4" />
+                <h3 className="text-xl font-semibold text-gray-900">Automatisation</h3>
               </div>
               <p className="text-gray-600 mb-6">
-                Conseil personnalisé et suivi post-formation pour une adoption réussie de l'IA dans vos processus éditoriaux.
+                Mise en place d'automatisations intelligentes pour transformer vos processus métier et libérer le potentiel de vos équipes.
               </p>
               <div className="bg-cyan-50 rounded-lg p-4 border border-cyan-100">
-                <p className="text-cyan-700 font-semibold">✓ Suivi personnalisé post-formation</p>
-                <p className="text-cyan-700 font-semibold">✓ Intégration dans vos workflows</p>
-                <p className="text-cyan-700 font-semibold">✓ Support technique continu</p>
+                <p className="text-cyan-700 font-semibold">✓ Automatisation des tâches répétitives</p>
+                <p className="text-cyan-700 font-semibold">✓ Workflows intelligents sur-mesure</p>
+                <p className="text-cyan-700 font-semibold">✓ Intégration avec vos outils existants</p>
               </div>
             </motion.div>
           </div>
@@ -418,7 +413,7 @@ const HomePage = () => {
               className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
             />
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Des modules concrets pour des résultats immédiats
+              Des modules concrets adaptés aux besoins des PME
             </p>
           </motion.div>
 
@@ -430,9 +425,9 @@ const HomePage = () => {
               className="bg-white backdrop-blur-sm rounded-2xl p-8 border border-gray-200 hover:border-blue-400 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl"
               onClick={() => navigate('/formation-ia01')}
             >
-              <FileText className="h-12 w-12 text-blue-600 mb-6" />
-              <h3 className="text-xl font-semibold mb-4 text-gray-900">IA01 – Rédaction & retranscription</h3>
-              <p className="text-gray-600 mb-6">Rédiger plus vite, mieux, en s'appuyant sur des agents IA fiables. Retranscrire automatiquement ses interviews en un temps record.</p>
+              <Briefcase className="h-12 w-12 text-blue-600 mb-6" />
+              <h3 className="text-xl font-semibold mb-4 text-gray-900">IA01 – Communication & Contenus</h3>
+              <p className="text-gray-600 mb-6">Créer du contenu marketing efficace, automatiser la communication client et optimiser votre présence digitale.</p>
               <div className="text-blue-600 font-semibold">3 heures</div>
             </motion.div>
 
@@ -443,9 +438,9 @@ const HomePage = () => {
               className="bg-white backdrop-blur-sm rounded-2xl p-8 border border-gray-200 hover:border-purple-400 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl"
               onClick={() => navigate('/formation-ia02')}
             >
-              <Brain className="h-12 w-12 text-purple-600 mb-6" />
-              <h3 className="text-xl font-semibold mb-4 text-gray-900">IA02 – Images générées & améliorées</h3>
-              <p className="text-gray-600 mb-6">Créer des visuels percutants sans faire appel à des prestataires, et améliorer la qualité d'images pour vos publications.</p>
+              <BarChart3 className="h-12 w-12 text-purple-600 mb-6" />
+              <h3 className="text-xl font-semibold mb-4 text-gray-900">IA02 – Analyse & Automatisation</h3>
+              <p className="text-gray-600 mb-6">Automatiser l'analyse de données, optimiser les processus métier et prendre de meilleures décisions.</p>
               <div className="text-purple-600 font-semibold">2 heures</div>
             </motion.div>
 
@@ -456,9 +451,9 @@ const HomePage = () => {
               className="bg-white backdrop-blur-sm rounded-2xl p-8 border border-gray-200 hover:border-cyan-400 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl"
               onClick={() => navigate('/formation-ia03')}
             >
-              <Video className="h-12 w-12 text-cyan-600 mb-6" />
-              <h3 className="text-xl font-semibold mb-4 text-gray-900">IA03 – Automatisation vidéo</h3>
-              <p className="text-gray-600 mb-6">Gagner du temps en montage et publier facilement des extraits courts adaptés aux formats sociaux.</p>
+              <Clock className="h-12 w-12 text-cyan-600 mb-6" />
+              <h3 className="text-xl font-semibold mb-4 text-gray-900">IA03 – Productivité & Gestion</h3>
+              <p className="text-gray-600 mb-6">Optimiser la gestion de projets, automatiser les tâches administratives et améliorer la collaboration.</p>
               <div className="text-cyan-600 font-semibold">2 heures</div>
             </motion.div>
           </div>
@@ -473,7 +468,7 @@ const HomePage = () => {
                  onClick={() => navigate('/formation-sur-mesure')}>
               <h3 className="text-xl font-semibold mb-4 text-gray-900">Formation sur mesure</h3>
               <p className="text-gray-600 mb-6 max-w-3xl mx-auto">
-                À la suite de notre audit, nous co-construisons des parcours adaptés à vos besoins : cas pratiques issus de vos propres contenus, 
+                À la suite de notre audit, nous co-construisons des parcours adaptés à votre secteur d'activité : cas pratiques issus de vos propres processus, 
                 outils compatibles avec votre environnement, accompagnement renforcé post-formation.
               </p>
               <Button
@@ -501,7 +496,7 @@ const HomePage = () => {
               className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
             />
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Une IA responsable, encadrée, au service du journalisme
+              Une IA responsable, encadrée, au service de votre entreprise
             </p>
           </motion.div>
 
@@ -517,7 +512,7 @@ const HomePage = () => {
                 </span>
                 <br />
                 <span className="text-gray-900">
-                  L'IA ne remplace pas le journaliste, elle l'assiste
+                  L'IA ne remplace pas l'humain, elle l'assiste
                 </span>
               </div>
               
@@ -525,8 +520,8 @@ const HomePage = () => {
                 <div className="flex items-start space-x-4">
                   <Shield className="h-8 w-8 text-green-600 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-xl font-semibold mb-2 text-gray-900">Contrôle éditorial final</h3>
-                    <p className="text-gray-600 leading-relaxed">Aucun contenu généré n'est publié sans validation humaine.</p>
+                    <h3 className="text-xl font-semibold mb-2 text-gray-900">Contrôle humain final</h3>
+                    <p className="text-gray-600 leading-relaxed">Aucune décision importante n'est déléguée entièrement à l'IA sans validation.</p>
                   </div>
                 </div>
                 
@@ -534,15 +529,15 @@ const HomePage = () => {
                   <Heart className="h-8 w-8 text-red-500 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="text-xl font-semibold mb-2 text-gray-900">Approche éthique</h3>
-                    <p className="text-gray-600 leading-relaxed">Intégration des enjeux éthiques, déontologiques et syndicaux dès la conception.</p>
+                    <p className="text-gray-600 leading-relaxed">Intégration des enjeux éthiques et de conformité dès la conception des solutions.</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-4">
                   <Crown className="h-8 w-8 text-yellow-600 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-xl font-semibold mb-2 text-gray-900">Souveraineté des rédactions</h3>
-                    <p className="text-gray-600 leading-relaxed">Transparence, qualité de l'information et indépendance face aux technologies.</p>
+                    <h3 className="text-xl font-semibold mb-2 text-gray-900">Souveraineté des données</h3>
+                    <p className="text-gray-600 leading-relaxed">Transparence, sécurité des données et indépendance face aux technologies.</p>
                   </div>
                 </div>
               </div>
@@ -561,7 +556,7 @@ const HomePage = () => {
               <ul className="space-y-4 text-gray-600">
                 <li className="flex items-center">
                   <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0" />
-                  Expertise croisée IA / journalisme
+                  Expertise croisée IA / entreprises
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0" />
@@ -585,50 +580,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Section Nos Références masquée temporairement
-      <section id="references" className="py-20 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <TextGenerateEffect 
-              words="Nos Références" 
-              className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
-            />
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Ils nous font confiance pour leur transformation IA
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center"
-          >
-            <div className="p-6">
-              <img src="/logo-playboy.svg" alt="Playboy" className="h-[82px] w-auto opacity-60 hover:opacity-100 transition-opacity mx-auto" />
-            </div>
-            <div className="p-6">
-              <img src="/logo-lui.svg" alt="Lui Magazine" className="h-[82px] w-auto opacity-60 hover:opacity-100 transition-opacity mx-auto" />
-            </div>
-            <div className="p-6">
-              <img src="/logo-voyage.png" alt="Voyage de Luxe" className="h-[82px] w-auto opacity-60 hover:opacity-100 transition-opacity mx-auto" />
-            </div>
-            <div className="p-6">
-              <img src="/logo-cuisine-ad.jpg" alt="Cuisine A&D" className="h-[82px] w-auto opacity-60 hover:opacity-100 transition-opacity mx-auto" />
-            </div>
-            <div className="p-6 col-span-2 md:col-span-1">
-              <img src="/logo-florentin.png" alt="Florentin" className="h-[82px] w-auto opacity-60 hover:opacity-100 transition-opacity mx-auto" />
-            </div>
-          </motion.div>
-        </div>
-      </section>
-      */}
-
       {/* FAQ Section */}
       <section id="faq" className="py-20 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto">
@@ -643,7 +594,7 @@ const HomePage = () => {
               className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
             />
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Retrouvez les réponses aux questions les plus courantes sur nos formations IA
+              Retrouvez les réponses aux questions les plus courantes sur nos formations IA pour PME
             </p>
           </motion.div>
 
@@ -656,10 +607,9 @@ const HomePage = () => {
             >
               <h3 className="text-lg font-semibold mb-4 text-gray-900">Faut-il avoir des connaissances techniques pour suivre les formations ?</h3>
               <p className="text-gray-600">
-                Non, aucun prérequis technique n'est nécessaire. Nos formations sont conçues pour être accessibles à tous les journalistes, quel que soit leur niveau technique. Nous partons des bases et progressons étape par étape.
+                Non, aucun prérequis technique n'est nécessaire. Nos formations sont conçues pour être accessibles à tous les collaborateurs, quel que soit leur niveau technique. Nous partons des bases et progressons étape par étape.
               </p>
             </motion.div>
-
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -667,9 +617,9 @@ const HomePage = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="bg-white backdrop-blur-sm rounded-xl p-6 border border-gray-200 shadow-md"
             >
-              <h3 className="text-lg font-semibold mb-4 text-gray-900">J'utilise déjà ChatGPT, est-ce que ça va vraiment me servir ?</h3>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Comment l'IA peut-elle s'adapter à notre secteur d'activité ?</h3>
               <p className="text-gray-600">
-                Oui, nos formations vont bien au-delà de l'utilisation basique de ChatGPT. Nous vous montrons comment intégrer l'IA dans vos workflows éditoriaux, automatiser des tâches complexes, générer des contenus fiables et gagner en efficacité sur l'ensemble de la chaîne de production journalistique.
+                Chaque secteur a ses spécificités. Nos formations incluent des cas d'usage adaptés à votre domaine d'activité, et nos formations sur-mesure sont entièrement personnalisées selon votre contexte métier.
               </p>
             </motion.div>
 
@@ -681,7 +631,7 @@ const HomePage = () => {
             >
               <h3 className="text-lg font-semibold mb-4 text-gray-900">Quel est le format des formations ?</h3>
               <p className="text-gray-600">
-                Nos formations sont proposées en présentiel, à distance ou en format hybride. Elles alternent théorie, démonstrations, ateliers pratiques et accompagnement personnalisé pour garantir une montée en compétences concrète et applicable immédiatement dans votre rédaction.
+                Nos formations sont proposées en présentiel, à distance ou en format hybride. Elles alternent théorie, démonstrations, ateliers pratiques et accompagnement personnalisé pour garantir une montée en compétences applicable immédiatement.
               </p>
             </motion.div>
 
@@ -691,9 +641,9 @@ const HomePage = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="bg-white backdrop-blur-sm rounded-xl p-6 border border-gray-200 shadow-md"
             >
-              <h3 className="text-lg font-semibold mb-4 text-gray-900">Proposez-vous un suivi après la formation ?</h3>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Quel est le retour sur investissement ?</h3>
               <p className="text-gray-600">
-                Oui, nous proposons un accompagnement post-formation pour assurer l'adoption des outils dans vos workflows. Pour les formations sur-mesure, cet accompagnement est renforcé et personnalisé.
+                Nos formations sont conçues pour générer un ROI rapide. En moyenne, nos clients observent des gains de productivité mesurables dès les premières semaines d'application des techniques apprises.
               </p>
             </motion.div>
 
@@ -703,9 +653,9 @@ const HomePage = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="bg-white backdrop-blur-sm rounded-xl p-6 border border-gray-200 shadow-md"
             >
-              <h3 className="text-lg font-semibold mb-4 text-gray-900">Les formations peuvent-elles être adaptées à notre rédaction ?</h3>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Proposez-vous un accompagnement post-formation ?</h3>
               <p className="text-gray-600">
-                Absolument ! Nous proposons des formations sur-mesure après audit de vos besoins éditoriaux et techniques. Le parcours est co-construit avec vos équipes et inclut des cas pratiques issus de vos workflows.
+                Oui, nous proposons systématiquement un accompagnement post-formation pour assurer l'adoption des outils dans vos processus. Pour les formations sur-mesure, cet accompagnement est renforcé et personnalisé.
               </p>
             </motion.div>
           </div>
@@ -748,7 +698,7 @@ const HomePage = () => {
               <div className="bg-gray-50 backdrop-blur-sm rounded-xl p-6 border border-gray-200 shadow-md">
                 <h3 className="text-lg font-semibold mb-4 text-gray-900">Pourquoi nous choisir ?</h3>
                 <ul className="space-y-3 text-gray-600">
-                  <li>• Expertise croisée IA / journalisme</li>
+                  <li>• Expertise croisée IA / entreprises</li>
                   <li>• Approche personnalisée et pragmatique</li>
                   <li>• Accompagnement post-formation inclus</li>
                   <li>• Veille continue sur les outils et cas d'usage</li>
@@ -784,7 +734,7 @@ const HomePage = () => {
                   Polaris IA
                 </h3>
                 <p className="text-blue-100 mb-6 text-lg max-w-md">
-                  L'intelligence artificielle générative au service des rédactions. Formations, audits et accompagnement pour une IA éthique et efficace.
+                  L'intelligence artificielle générative au service des PME. Formations, audits et accompagnement pour une IA éthique et efficace.
                 </p>
                 <div className="flex space-x-4">
                   <button className="px-6 py-3 bg-white/10 hover:bg-white/20 rounded-lg transition-all duration-300 backdrop-blur-sm border border-white/20">
@@ -806,10 +756,10 @@ const HomePage = () => {
               >
                 <h4 className="text-xl font-semibold mb-6 text-white">Services</h4>
                 <ul className="space-y-3 text-blue-100">
-                  <li><a href="/#services" className="hover:text-white transition-colors">Audit IA</a></li>
-                  <li><a href="/#formations" className="hover:text-white transition-colors">Formations IA</a></li>
-                  <li><a href="/#services" className="hover:text-white transition-colors">Accompagnement</a></li>
-                  <li><a href="/#contact" className="hover:text-white transition-colors">Formation sur mesure</a></li>
+                  <li><a href="/page-d-accueil#services" className="hover:text-white transition-colors">Audit IA</a></li>
+                  <li><a href="/page-d-accueil#formations" className="hover:text-white transition-colors">Formations IA</a></li>
+                  <li><a href="/page-d-accueil#services" className="hover:text-white transition-colors">Accompagnement</a></li>
+                  <li><a href="/page-d-accueil#contact" className="hover:text-white transition-colors">Formation sur mesure</a></li>
                 </ul>
               </motion.div>
             </div>
@@ -823,10 +773,10 @@ const HomePage = () => {
               >
                 <h4 className="text-xl font-semibold mb-6 text-white">Informations</h4>
                 <ul className="space-y-3 text-blue-100">
-                  <li><a href="/#about" className="hover:text-white transition-colors">Nos engagements</a></li>
-                  <li><a href="/#references" className="hover:text-white transition-colors">Nos références</a></li>
-                  <li><a href="/#faq" className="hover:text-white transition-colors">FAQ</a></li>
-                  <li><a href="/#contact" className="hover:text-white transition-colors">Contact</a></li>
+                  <li><a href="/page-d-accueil#about" className="hover:text-white transition-colors">Nos engagements</a></li>
+                  <li><a href="/page-d-accueil#references" className="hover:text-white transition-colors">Nos références</a></li>
+                  <li><a href="/page-d-accueil#faq" className="hover:text-white transition-colors">FAQ</a></li>
+                  <li><a href="/page-d-accueil#contact" className="hover:text-white transition-colors">Contact</a></li>
                 </ul>
               </motion.div>
             </div>
@@ -854,59 +804,4 @@ const HomePage = () => {
   );
 };
 
-function App() {
-  // Désactiver la restauration automatique du défilement du navigateur
-  React.useLayoutEffect(() => {
-    // Désactiver la restauration automatique du navigateur
-    if ('scrollRestoration' in window.history) {
-      window.history.scrollRestoration = 'manual';
-    }
-
-    // S'assurer que la page est tout en haut au chargement initial
-    window.scrollTo(0, 0);
-
-    // Nettoyage
-    return () => {
-      if ('scrollRestoration' in window.history) {
-        window.history.scrollRestoration = 'auto';
-      }
-    };
-  }, []);
-
-  // Gestion du défilement personnalisée pour les changements de route
-  const location = useLocation();
-  
-  React.useEffect(() => {
-    // S'assurer que le défilement est en haut pour chaque changement de route de manière instantanée
-    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-    
-    // Si l'URL contient un hash, faire défiler jusqu'à l'élément correspondant
-    if (location.hash) {
-      const id = location.hash.replace('#', '');
-      const element = document.getElementById(id);
-      
-      if (element) {
-        // Petit délai pour s'assurer que le composant est monté
-        setTimeout(() => {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
-      }
-    }
-  }, [location]);
-
-  return (
-    <>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/page-d-accueil" element={<PageAccueilPME />} />
-        <Route path="/formation-ia01" element={<FormationIA01 />} />
-        <Route path="/formation-ia02" element={<FormationIA02 />} />
-        <Route path="/formation-ia03" element={<FormationIA03 />} />
-        <Route path="/formation-sur-mesure" element={<FormationSurMesure />} />
-      </Routes>
-    </>
-  );
-}
-
-export default App;
-
+export default PageAccueilPME;
