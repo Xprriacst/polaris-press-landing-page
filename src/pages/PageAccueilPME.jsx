@@ -141,7 +141,7 @@ const PageAccueilPME = () => {
                 duration={2.5}
                 className="text-6xl font-black text-purple-700 mb-3"
               />
-              <div className="font-bold text-xl text-gray-900 mb-2">économisées par jour</div>
+              <div className="font-bold text-xl text-gray-900 mb-2">gagnées par jour</div>
               <div className="text-gray-600 mb-4">et par collaborateur en moyenne</div>
               <div className="text-xs text-gray-400">Source : Yes We Prompt 2025</div>
             </motion.div>
@@ -158,7 +158,7 @@ const PageAccueilPME = () => {
                 className="text-6xl font-black text-green-700 mb-3"
               />
               <div className="font-bold text-xl text-gray-900 mb-2">des PME interrogées</div>
-              <div className="text-gray-600 mb-4">déclarent amélioration efficacité</div>
+              <div className="text-gray-600 mb-4">déclarent une amélioration d'activité</div>
               <div className="text-xs text-gray-400">Source : Étude Gedia-McKinsey 2025</div>
             </motion.div>
           </div>
@@ -185,22 +185,6 @@ const PageAccueilPME = () => {
               L'IA générative transforme le monde des affaires. Anticipez le changement plutôt que de le subir.
             </p>
             
-            {/* Badge statistique centré sous le sous-titre */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="inline-flex items-center bg-gradient-to-r from-orange-100 to-yellow-100 rounded-2xl px-6 py-4 border border-orange-200 shadow-lg"
-            >
-              <TrendingUp className="h-5 w-5 text-orange-600 mr-3" />
-              <div className="text-left">
-                <div className="flex items-center space-x-2">
-                  <span className="font-bold text-2xl text-orange-800">73%</span>
-                  <span className="text-gray-700">des dirigeants de PME considèrent l'IA comme prioritaire</span>
-                </div>
-                <p className="text-xs text-gray-500 mt-1">Source : Étude Deloitte PME, 2024</p>
-              </div>
-            </motion.div>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
@@ -422,8 +406,7 @@ const PageAccueilPME = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="bg-white backdrop-blur-sm rounded-2xl p-8 border border-gray-200 hover:border-blue-400 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl"
-              onClick={() => navigate('/formation-ia01')}
+              className="bg-white backdrop-blur-sm rounded-2xl p-8 border border-gray-200 hover:border-blue-400 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <Briefcase className="h-12 w-12 text-blue-600 mb-6" />
               <h3 className="text-xl font-semibold mb-4 text-gray-900">IA01 – Communication & Contenus</h3>
@@ -435,8 +418,7 @@ const PageAccueilPME = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="bg-white backdrop-blur-sm rounded-2xl p-8 border border-gray-200 hover:border-purple-400 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl"
-              onClick={() => navigate('/formation-ia02')}
+              className="bg-white backdrop-blur-sm rounded-2xl p-8 border border-gray-200 hover:border-purple-400 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <BarChart3 className="h-12 w-12 text-purple-600 mb-6" />
               <h3 className="text-xl font-semibold mb-4 text-gray-900">IA02 – Analyse & Automatisation</h3>
@@ -448,8 +430,7 @@ const PageAccueilPME = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="bg-white backdrop-blur-sm rounded-2xl p-8 border border-gray-200 hover:border-cyan-400 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl"
-              onClick={() => navigate('/formation-ia03')}
+              className="bg-white backdrop-blur-sm rounded-2xl p-8 border border-gray-200 hover:border-cyan-400 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <Clock className="h-12 w-12 text-cyan-600 mb-6" />
               <h3 className="text-xl font-semibold mb-4 text-gray-900">IA03 – Productivité & Gestion</h3>
