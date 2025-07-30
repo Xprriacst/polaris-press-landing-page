@@ -136,11 +136,7 @@ const PageAccueilPME = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="p-8 rounded-2xl shadow-xl bg-purple-50 border border-purple-100 hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
-              <AnimatedCounter 
-                end="1h30" 
-                duration={2.5}
-                className="text-6xl font-black text-purple-700 mb-3"
-              />
+              <div className="text-6xl font-black text-purple-700 mb-3">1h30</div>
               <div className="font-bold text-xl text-gray-900 mb-2">gagnées par jour</div>
               <div className="text-gray-600 mb-4">et par collaborateur en moyenne</div>
               <div className="text-xs text-gray-400">Source : Yes We Prompt 2025</div>
@@ -265,24 +261,6 @@ const PageAccueilPME = () => {
             </motion.div>
           </div>
 
-          {/* Note sur l'importance de la formation */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg max-w-4xl mx-auto mb-8"
-          >
-            <div className="flex items-start space-x-3">
-              <Lightbulb className="h-5 w-5 text-yellow-600 mt-1 flex-shrink-0" />
-              <div>
-                <p className="text-sm text-gray-700 italic leading-relaxed">
-                  <strong>Pourquoi la formation est essentielle ?</strong> Selon une étude MIT, les entreprises qui forment leurs collaborateurs à l'IA 
-                  voient leur productivité augmenter de 14% en moyenne, contre seulement 3% pour celles qui adoptent l'IA sans formation préalable.
-                </p>
-                <p className="text-xs text-gray-500 mt-2">Source : MIT Technology Review, 2024</p>
-              </div>
-            </div>
-          </motion.div>
 
           {/* CTA */}
           <motion.div
@@ -499,26 +477,26 @@ const PageAccueilPME = () => {
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <Shield className="h-8 w-8 text-green-600 mt-1 flex-shrink-0" />
+                  <Zap className="h-8 w-8 text-green-600 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-xl font-semibold mb-2 text-gray-900">Contrôle humain final</h3>
-                    <p className="text-gray-600 leading-relaxed">Aucune décision importante n'est déléguée entièrement à l'IA sans validation.</p>
+                    <h3 className="text-xl font-semibold mb-2 text-gray-900">Rapidité et simplicité</h3>
+                    <p className="text-gray-600 leading-relaxed">Solutions faciles à intégrer, sans bouleverser l'existant. L'IA intervient pour automatiser les tâches chronophages : vous gagnez du temps immédiatement sur l'administratif, la gestion ou la prospection.</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <Heart className="h-8 w-8 text-red-500 mt-1 flex-shrink-0" />
+                  <Users className="h-8 w-8 text-blue-500 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-xl font-semibold mb-2 text-gray-900">Approche éthique</h3>
-                    <p className="text-gray-600 leading-relaxed">Intégration des enjeux éthiques et de conformité dès la conception des solutions.</p>
+                    <h3 className="text-xl font-semibold mb-2 text-gray-900">Accompagnement sur mesure</h3>
+                    <p className="text-gray-600 leading-relaxed">Formation, aide au choix et support continu : nos experts facilitent la prise en main selon votre activité, même sans expertise technique.</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <Crown className="h-8 w-8 text-yellow-600 mt-1 flex-shrink-0" />
+                  <TrendingUp className="h-8 w-8 text-purple-600 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-xl font-semibold mb-2 text-gray-900">Souveraineté des données</h3>
-                    <p className="text-gray-600 leading-relaxed">Transparence, sécurité des données et indépendance face aux technologies.</p>
+                    <h3 className="text-xl font-semibold mb-2 text-gray-900">Retour sur investissement rapide et mesurable</h3>
+                    <p className="text-gray-600 leading-relaxed">Les outils IA retenus apportent des gains concrets : productivité, réduction des erreurs et meilleure satisfaction client (statistiques récentes à l'appui).</p>
                   </div>
                 </div>
               </div>
