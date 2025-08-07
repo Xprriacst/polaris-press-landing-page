@@ -15,6 +15,9 @@ import FormationIA02 from './pages/FormationIA02';
 import FormationIA03 from './pages/FormationIA03';
 import FormationSurMesure from './pages/FormationSurMesure';
 import PageAccueilPME from './pages/PageAccueilPME';
+import CGV from './pages/CGV';
+import MentionsLegales from './pages/MentionsLegales';
+import PolitiqueConfidentialite from './pages/PolitiqueConfidentialite';
 
 import './App.css';
 import { 
@@ -389,18 +392,131 @@ const HomePage = () => {
             >
               <div className="flex items-center mb-6">
                 <Users className="h-12 w-12 text-cyan-600 mr-4" />
-                <h3 className="text-xl font-semibold text-gray-900">Accompagnement</h3>
+                <h3 className="text-xl font-semibold text-gray-900">Automatisation & Agents IA</h3>
               </div>
               <p className="text-gray-600 mb-6">
-                Conseil personnalisé et suivi post-formation pour une adoption réussie de l'IA dans vos processus éditoriaux.
+                Implémentation d'automatisations de processus et déploiement d'agents IA personnalisés pour optimiser vos workflows éditoriaux.
               </p>
               <div className="bg-cyan-50 rounded-lg p-4 border border-cyan-100">
-                <p className="text-cyan-700 font-semibold">✓ Suivi personnalisé post-formation</p>
-                <p className="text-cyan-700 font-semibold">✓ Intégration dans vos workflows</p>
-                <p className="text-cyan-700 font-semibold">✓ Support technique continu</p>
+                <p className="text-cyan-700 font-semibold">✓ Automatisation des processus répétitifs</p>
+                <p className="text-cyan-700 font-semibold">✓ Agents IA sur mesure</p>
+                <p className="text-cyan-700 font-semibold">✓ Intégration dans vos outils existants</p>
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Automatisation et Agents IA Section */}
+      <section id="automatisation" className="py-20 px-4 bg-gradient-to-br from-purple-50 to-indigo-50">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <TextGenerateEffect 
+              words="Automatisation & Agents IA" 
+              className="text-4xl md:text-6xl font-bold text-gray-900 mb-6"
+            />
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Transformez vos processus éditoriaux avec des solutions d'automatisation intelligentes 
+              et des agents IA personnalisés qui s'intègrent parfaitement à vos workflows existants.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-purple-100">
+                <div className="flex items-center mb-6">
+                  <Zap className="h-12 w-12 text-purple-600 mr-4" />
+                  <h3 className="text-2xl font-bold text-gray-900">Automatisation de Processus</h3>
+                </div>
+                <p className="text-gray-600 mb-6">
+                  Libérez vos équipes des tâches répétitives grâce à des automatisations intelligentes 
+                  qui s'adaptent à vos besoins spécifiques.
+                </p>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                    Génération automatique de contenus
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                    Workflows de validation et publication
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                    Traitement automatique des données
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                    Intégration avec vos outils existants
+                  </li>
+                </ul>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-indigo-100">
+                <div className="flex items-center mb-6">
+                  <Brain className="h-12 w-12 text-indigo-600 mr-4" />
+                  <h3 className="text-2xl font-bold text-gray-900">Agents IA Personnalisés</h3>
+                </div>
+                <p className="text-gray-600 mb-6">
+                  Déployez des assistants IA spécialisés qui comprennent votre métier et 
+                  s'adaptent à votre ligne éditoriale.
+                </p>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                    Assistants rédactionnels intelligents
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                    Agents de recherche et veille
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                    Chatbots métier personnalisés
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                    Formation et adaptation continue
+                  </li>
+                </ul>
+              </div>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-8 text-white text-center"
+          >
+            <h3 className="text-2xl font-bold mb-4">Prêt à automatiser vos processus ?</h3>
+            <p className="text-lg mb-6 opacity-90">
+              Découvrez comment nos solutions d'automatisation et nos agents IA peuvent 
+              transformer votre productivité et optimiser vos workflows éditoriaux.
+            </p>
+            <Button
+              borderRadius="1.75rem"
+              className="bg-white text-purple-600 hover:bg-gray-50 font-semibold px-8 py-3"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Demander une démonstration
+            </Button>
+          </motion.div>
         </div>
       </section>
 
@@ -700,12 +816,48 @@ const HomePage = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="bg-white backdrop-blur-sm rounded-xl p-6 border border-gray-200 shadow-md"
+            >
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Qu'est-ce que l'automatisation de processus éditoriaux ?</h3>
+              <p className="text-gray-600">
+                L'automatisation consiste à déléguer à l'IA les tâches répétitives de votre workflow : génération de contenus, mise en forme, publication multi-canaux, veille automatique, etc. Cela libère du temps pour les tâches à plus forte valeur ajoutée comme l'investigation et l'analyse.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
+              className="bg-white backdrop-blur-sm rounded-xl p-6 border border-gray-200 shadow-md"
+            >
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Comment fonctionnent les agents IA personnalisés ?</h3>
+              <p className="text-gray-600">
+                Nos agents IA sont des assistants spécialisés formés sur votre ligne éditoriale, vos sources et vos processus. Ils peuvent rédiger dans votre style, effectuer de la veille thématique, répondre aux lecteurs ou même gérer des workflows complexes en autonomie, tout en respectant vos standards qualité.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.7 }}
               className="bg-white backdrop-blur-sm rounded-xl p-6 border border-gray-200 shadow-md"
             >
               <h3 className="text-lg font-semibold mb-4 text-gray-900">Les formations peuvent-elles être adaptées à notre rédaction ?</h3>
               <p className="text-gray-600">
                 Absolument ! Nous proposons des formations sur-mesure après audit de vos besoins éditoriaux et techniques. Le parcours est co-construit avec vos équipes et inclut des cas pratiques issus de vos workflows.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="bg-white backdrop-blur-sm rounded-xl p-6 border border-gray-200 shadow-md"
+            >
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Combien de temps faut-il pour déployer une solution d'automatisation ?</h3>
+              <p className="text-gray-600">
+                Le délai varie selon la complexité : de 2-4 semaines pour des automatisations simples à 2-3 mois pour des agents IA complexes. Nous procédons par étapes avec des livrables intermédiaires pour que vous puissiez bénéficier rapidement des premiers gains de productivité.
               </p>
             </motion.div>
           </div>
@@ -824,7 +976,7 @@ const HomePage = () => {
                 <h4 className="text-xl font-semibold mb-6 text-white">Informations</h4>
                 <ul className="space-y-3 text-blue-100">
                   <li><a href="/#about" className="hover:text-white transition-colors">Nos engagements</a></li>
-                  <li><a href="/#references" className="hover:text-white transition-colors">Nos références</a></li>
+
                   <li><a href="/#faq" className="hover:text-white transition-colors">FAQ</a></li>
                   <li><a href="/#contact" className="hover:text-white transition-colors">Contact</a></li>
                 </ul>
@@ -840,7 +992,7 @@ const HomePage = () => {
             className="border-t border-white/20 pt-8"
           >
             <div className="flex flex-col md:flex-row justify-between items-center text-blue-100">
-              <p>© 2024 Polaris IA. Tous droits réservés.</p>
+              <p>© 2024 Polaris IA - KANRA Publishing. Tous droits réservés.</p>
               <div className="flex space-x-6 mt-4 md:mt-0">
                 <a href="/mentions-legales" className="hover:text-white transition-colors">Mentions légales</a>
                 <a href="/politique-confidentialite" className="hover:text-white transition-colors">Politique de confidentialité</a>
@@ -903,6 +1055,9 @@ function App() {
         <Route path="/formation-ia02" element={<FormationIA02 />} />
         <Route path="/formation-ia03" element={<FormationIA03 />} />
         <Route path="/formation-sur-mesure" element={<FormationSurMesure />} />
+        <Route path="/cgv" element={<CGV />} />
+        <Route path="/mentions-legales" element={<MentionsLegales />} />
+        <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
       </Routes>
     </>
   );
