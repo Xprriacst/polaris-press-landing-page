@@ -128,12 +128,12 @@ const HomePage = () => {
               className="p-8 rounded-2xl shadow-xl bg-blue-50 border border-blue-100 hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
               <AnimatedCounter 
-                end="4h" 
+                end="15" 
                 duration={2.5}
                 className="text-6xl font-black text-blue-700 mb-3"
               />
-              <div className="font-bold text-xl text-gray-900 mb-2">gagnées</div>
-              <div className="text-gray-600 mb-4">sur un article moyen</div>
+              <div className="font-bold text-xl text-gray-900 mb-2">éditeurs</div>
+              <div className="text-gray-600 mb-4">accompagnés</div>
               <div className="text-xs text-gray-400 flex items-center">
                 
               </div>
@@ -146,13 +146,13 @@ const HomePage = () => {
               className="p-8 rounded-2xl shadow-xl bg-purple-50 border border-purple-100 hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
               <AnimatedCounter 
-                end="x4" 
+                end="20" 
                 duration={2.5}
                 className="text-6xl font-black text-purple-700 mb-3"
               />
-              <div className="font-bold text-xl text-gray-900 mb-2">audio plus rapide</div>
-              <div className="text-gray-600 mb-4">Retranscription d'interview</div>
-              <div className="text-xs text-gray-400">Source : Associated Press</div>
+              <div className="font-bold text-xl text-gray-900 mb-2">solutions d'IA</div>
+              <div className="text-gray-600 mb-4">implémentées</div>
+              <div className="text-xs text-gray-400"></div>
             </motion.div>
 
             <motion.div
@@ -162,13 +162,13 @@ const HomePage = () => {
               className="p-8 rounded-2xl shadow-xl bg-green-50 border border-green-100 hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
               <AnimatedCounter 
-                end="95%" 
+                end="+25%" 
                 duration={2.5}
                 className="text-6xl font-black text-green-700 mb-3"
               />
-              <div className="font-bold text-xl text-gray-900 mb-2">d'économie</div>
-              <div className="text-gray-600 mb-4">sur les visuels illustratifs</div>
-              <div className="text-xs text-gray-400">Source : Accenture</div>
+              <div className="font-bold text-xl text-gray-900 mb-2">de chiffre d'affaires</div>
+              <div className="text-gray-600 mb-4">en moyenne pour nos clients</div>
+              <div className="text-xs text-gray-400"></div>
             </motion.div>
           </div>
         </div>
@@ -197,6 +197,26 @@ const HomePage = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
+              className="bg-white backdrop-blur-sm rounded-2xl p-8 border border-cyan-200 hover:border-cyan-300 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              <div className="flex items-center mb-6">
+                <Users className="h-12 w-12 text-cyan-600 mr-4" />
+                <h3 className="text-xl font-semibold text-gray-900">Automatisation & Agents IA</h3>
+              </div>
+              <p className="text-gray-600 mb-6">
+                Implémentation d'automatisations de processus et déploiement d'agents IA personnalisés pour optimiser vos workflows éditoriaux.
+              </p>
+              <div className="bg-cyan-50 rounded-lg p-4 border border-cyan-100">
+                <p className="text-cyan-700 font-semibold">✓ Automatisation des processus répétitifs</p>
+                <p className="text-cyan-700 font-semibold">✓ Agents IA sur mesure</p>
+                <p className="text-cyan-700 font-semibold">✓ Intégration dans vos outils existants</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               className="bg-white backdrop-blur-sm rounded-2xl p-8 border border-blue-200 hover:border-blue-300 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <div className="flex items-center mb-6">
@@ -216,7 +236,7 @@ const HomePage = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
               className="bg-white backdrop-blur-sm rounded-2xl p-8 border border-purple-200 hover:border-purple-300 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <div className="flex items-center mb-6">
@@ -232,26 +252,188 @@ const HomePage = () => {
                 <p className="text-purple-700 font-semibold">✓ Support et ressources inclus</p>
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
 
+      {/* Automatisation et Agents IA Section (moved after Services) */}
+      <section id="automatisation" className="py-24 px-4 bg-gradient-to-br from-purple-50 via-indigo-50 to-white">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+              Automatisation & <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Agents IA</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Transformez vos processus éditoriaux avec des solutions d'automatisation intelligentes 
+              et des agents IA personnalisés qui s'intègrent parfaitement à vos workflows existants.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="bg-white backdrop-blur-sm rounded-2xl p-8 border border-cyan-200 hover:border-cyan-300 transition-all duration-300 shadow-lg hover:shadow-xl"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
             >
-              <div className="flex items-center mb-6">
-                <Users className="h-12 w-12 text-cyan-600 mr-4" />
-                <h3 className="text-xl font-semibold text-gray-900">Automatisation & Agents IA</h3>
-              </div>
-              <p className="text-gray-600 mb-6">
-                Implémentation d'automatisations de processus et déploiement d'agents IA personnalisés pour optimiser vos workflows éditoriaux.
-              </p>
-              <div className="bg-cyan-50 rounded-lg p-4 border border-cyan-100">
-                <p className="text-cyan-700 font-semibold">✓ Automatisation des processus répétitifs</p>
-                <p className="text-cyan-700 font-semibold">✓ Agents IA sur mesure</p>
-                <p className="text-cyan-700 font-semibold">✓ Intégration dans vos outils existants</p>
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-purple-100">
+                <div className="flex items-center mb-6">
+                  <Zap className="h-12 w-12 text-purple-600 mr-4" />
+                  <h3 className="text-2xl font-bold text-gray-900">Automatisation de Processus</h3>
+                </div>
+                <p className="text-gray-600 mb-6">
+                  Libérez vos équipes des tâches répétitives grâce à des automatisations intelligentes 
+                  qui s'adaptent à vos besoins spécifiques.
+                </p>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                    Génération de contenus sur les réseaux sociaux
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                    Prospection automatisée d'annonceurs
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                    Automatisation de la rédaction d'articles de blogs
+                  </li>
+                </ul>
               </div>
             </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-indigo-100">
+                <div className="flex items-center mb-6">
+                  <Brain className="h-12 w-12 text-indigo-600 mr-4" />
+                  <h3 className="text-2xl font-bold text-gray-900">Agents IA Personnalisés</h3>
+                </div>
+                <p className="text-gray-600 mb-6">
+                  Déployez des assistants IA spécialisés qui comprennent votre métier et 
+                  s'adaptent à votre ligne éditoriale.
+                </p>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                    Assistant mise en page automatique de magazine
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                    Agents de recherche et veille
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                    Agent spécialisé (campagnes de crowdfunding, dossier de presse, facturation...)
+                  </li>
+                </ul>
+              </div>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-8 text-white text-center"
+          >
+            <h3 className="text-2xl font-bold mb-4">Prêt à automatiser vos processus ?</h3>
+            <p className="text-lg mb-6 opacity-90">
+              Découvrez comment nos solutions d'automatisation et nos agents IA peuvent 
+              transformer votre productivité et optimiser vos workflows éditoriaux.
+            </p>
+            <Button
+              borderRadius="1.75rem"
+              className="bg-white text-purple-600 hover:bg-gray-50 font-semibold px-8 py-3"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Demander une démonstration
+            </Button>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Automatisations concrètes Section (moved after Automatisation & Agents IA) */}
+      <section id="automatisations" className="py-24 px-4 bg-gradient-to-b from-white to-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-14"
+          >
+            <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900">
+              Imaginez<span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">...</span>
+            </h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-200">
+                <p className="text-xl leading-relaxed text-gray-800">
+                  ...vous terminez votre article, vous allez prendre un café.
+                </p>
+                <p className="mt-3 text-lg leading-relaxed text-gray-800">
+                  À votre retour, trois brouillons vous attendent sur votre bureau&nbsp;:
+                </p>
+                <ul className="mt-4 space-y-3 text-gray-800">
+                  <li className="flex items-center gap-3">
+                    <Linkedin className="h-5 w-5 text-blue-600" />
+                    <span>un post LinkedIn</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <Instagram className="h-5 w-5 text-pink-600" />
+                    <span>un post Instagram</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <Twitter className="h-5 w-5 text-cyan-600" />
+                    <span>un post X — rédigés dans votre <strong>style</strong></span>
+                  </li>
+                </ul>
+                <p className="mt-6 text-lg text-gray-700 italic">
+                  Vous validez, ajustez quelques détails, et <strong>en un clic</strong>, vous publiez sur les trois réseaux.
+                </p>
+                <p className="mt-4 text-sm text-gray-500">
+                  C'est exactement ce que nous appelons une automatisation.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+            >
+              <div className="relative">
+                <img
+                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
+                  alt="Journaliste soulagé·e au bureau après automatisation"
+                  className="rounded-2xl shadow-2xl border border-gray-200 object-cover w-full h-[320px] md:h-[420px]"
+                />
+                <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-gradient-to-tr from-purple-200 to-blue-200 rounded-2xl blur-md opacity-60" />
+                <div className="absolute -top-4 -right-4 w-28 h-28 bg-gradient-to-tr from-blue-200 to-purple-200 rounded-2xl blur-md opacity-60" />
+              </div>
+            </motion.div>
+          </div>
+
+          <div className="text-center mt-12">
+            <button
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              className="px-8 py-4 rounded-full bg-gradient-to-r from-blue-600 to-purple-700 text-white font-semibold hover:from-blue-700 hover:to-purple-800 transition-all transform hover:scale-105 shadow-lg"
+            >
+              Mettre en place cette automatisation
+            </button>
           </div>
         </div>
       </section>
@@ -305,8 +487,8 @@ const HomePage = () => {
 
       {/* Automatisation & Agents IA section moved below Formations */}
 
-      {/* Formations Section */}
-      <section id="formations" className="py-20 px-4 bg-white">
+      {/* Formations Section (consolidated) */}
+      <section id="formations" className="py-20 px-4 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -314,76 +496,107 @@ const HomePage = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <TextGenerateEffect 
-              words="Formations IA" 
-              className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
-            />
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Des modules concrets pour des résultats immédiats
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+              Formations <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">IA</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              L'IA générative transforme le journalisme. Anticipez le changement plutôt que de le subir.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-12 mb-16">
+            {/* Formations sur étagère */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="bg-white backdrop-blur-sm rounded-2xl p-8 border border-gray-200 hover:border-blue-400 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl"
-              onClick={() => navigate('/formation-ia01')}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="bg-white rounded-2xl p-8 shadow-xl border border-gray-200"
             >
-              <FileText className="h-12 w-12 text-blue-600 mb-6" />
-              <h3 className="text-xl font-semibold mb-4 text-gray-900">IA01 – Rédaction & retranscription</h3>
-              <p className="text-gray-600 mb-6">Rédiger plus vite, mieux, en s'appuyant sur des agents IA fiables. Retranscrire automatiquement ses interviews en un temps record.</p>
-              <div className="text-blue-600 font-semibold">3 heures</div>
+              <div className="flex items-center mb-6">
+                <GraduationCap className="h-12 w-12 text-blue-600 mr-4" />
+                <h3 className="text-2xl font-bold text-gray-900">Formations sur étagère</h3>
+              </div>
+              <p className="text-gray-600 mb-6">
+                Des modules concrets pour des résultats immédiats. Formations conçues par et pour les journalistes.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <FileText className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900">IA01 – Rédaction & retranscription</h4>
+                    <p className="text-gray-600 text-sm">Rédiger plus vite, mieux, en s'appuyant sur des agents IA fiables</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <Brain className="h-6 w-6 text-purple-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900">IA02 – Images générées & améliorées</h4>
+                    <p className="text-gray-600 text-sm">Créer des visuels percutants sans faire appel à des prestataires</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <Video className="h-6 w-6 text-cyan-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900">IA03 – Vidéo & audio</h4>
+                    <p className="text-gray-600 text-sm">Créer des contenus vidéo et audio de qualité professionnelle</p>
+                  </div>
+                </div>
+              </div>
             </motion.div>
 
+            {/* Formations sur mesure */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="bg-white backdrop-blur-sm rounded-2xl p-8 border border-gray-200 hover:border-purple-400 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl"
-              onClick={() => navigate('/formation-ia02')}
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="bg-white rounded-2xl p-8 shadow-xl border border-gray-200"
             >
-              <Brain className="h-12 w-12 text-purple-600 mb-6" />
-              <h3 className="text-xl font-semibold mb-4 text-gray-900">IA02 – Images générées & améliorées</h3>
-              <p className="text-gray-600 mb-6">Créer des visuels percutants sans faire appel à des prestataires, et améliorer la qualité d'images pour vos publications.</p>
-              <div className="text-purple-600 font-semibold">2 heures</div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="bg-white backdrop-blur-sm rounded-2xl p-8 border border-gray-200 hover:border-cyan-400 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl"
-              onClick={() => navigate('/formation-ia03')}
-            >
-              <Video className="h-12 w-12 text-cyan-600 mb-6" />
-              <h3 className="text-xl font-semibold mb-4 text-gray-900">IA03 – Automatisation vidéo</h3>
-              <p className="text-gray-600 mb-6">Gagner du temps en montage et publier facilement des extraits courts adaptés aux formats sociaux.</p>
-              <div className="text-cyan-600 font-semibold">2 heures</div>
+              <div className="flex items-center mb-6">
+                <Users className="h-12 w-12 text-purple-600 mr-4" />
+                <h3 className="text-2xl font-bold text-gray-900">Formations sur mesure</h3>
+              </div>
+              <p className="text-gray-600 mb-6">
+                Des parcours adaptés à vos besoins spécifiques et à votre contexte éditorial.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Audit préalable</h4>
+                    <p className="text-gray-600 text-sm">Analyse de vos besoins et workflows existants</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Contenu personnalisé</h4>
+                    <p className="text-gray-600 text-sm">Modules adaptés à votre ligne éditoriale</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Suivi post-formation</h4>
+                    <p className="text-gray-600 text-sm">Accompagnement dans la mise en pratique</p>
+                  </div>
+                </div>
+              </div>
             </motion.div>
           </div>
+
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="mt-16 text-center"
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="text-center"
           >
-            <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 border border-blue-200 cursor-pointer hover:border-blue-300 transition-all duration-300 shadow-lg hover:shadow-xl"
-                 onClick={() => navigate('/formation-sur-mesure')}>
-              <h3 className="text-xl font-semibold mb-4 text-gray-900">Formation sur mesure</h3>
-              <p className="text-gray-600 mb-6 max-w-3xl mx-auto">
-                À la suite de notre audit, nous co-construisons des parcours adaptés à vos besoins : cas pratiques issus de vos propres contenus, 
-                outils compatibles avec votre environnement, accompagnement renforcé post-formation.
-              </p>
-              <Button
-                borderRadius="1.75rem"
-                className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800"
-              >
-                Demander un devis
-              </Button>
-            </div>
+            <button 
+              onClick={() => scrollToSection('contact')}
+              className="px-8 py-4 rounded-full bg-gradient-to-r from-blue-600 to-purple-700 text-white font-semibold hover:from-blue-700 hover:to-purple-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-lg"
+            >
+              Découvrir nos formations
+            </button>
           </motion.div>
         </div>
       </section>
@@ -407,21 +620,6 @@ const HomePage = () => {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
               L'IA générative transforme le journalisme. Anticipez le changement plutôt que de le subir.
             </p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="inline-flex items-center bg-gradient-to-r from-orange-100 to-yellow-100 rounded-2xl px-6 py-4 border border-orange-200 shadow-lg"
-            >
-              <TrendingUp className="h-5 w-5 text-orange-600 mr-3" />
-              <div className="text-left">
-                <div className="flex items-center space-x-2">
-                  <span className="font-bold text-2xl text-orange-800">80%</span>
-                  <span className="text-gray-700">des journalistes utilisent déjà ChatGPT ou des outils similaires</span>
-                </div>
-                <p className="text-xs text-gray-500 mt-1">Source : Reuters Institute, 2024</p>
-              </div>
-            </motion.div>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
@@ -502,24 +700,6 @@ const HomePage = () => {
             </motion.div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg max-w-4xl mx-auto mb-8"
-          >
-            <div className="flex items-start space-x-3">
-              <Lightbulb className="h-5 w-5 text-yellow-600 mt-1 flex-shrink-0" />
-              <div>
-                <p className="text-sm text-gray-700 italic leading-relaxed">
-                  <strong>Qu'est-ce qu'une hallucination IA ?</strong> Lorsqu'une IA génère des informations fausses mais présentées de manière convaincante. 
-                  Par exemple, en mai 2023, The Irish Times a dû retirer un article entier après avoir découvert qu'il avait été généré par ChatGPT 
-                  et contenait plusieurs inexactitudes factuelles.
-                </p>
-                <p className="text-xs text-gray-500 mt-2">Source : The Irish Times, mai 2023</p>
-              </div>
-            </div>
-          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -537,199 +717,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Automatisation et Agents IA Section (after Formations) */}
-      <section id="automatisation" className="py-24 px-4 bg-gradient-to-br from-purple-50 via-indigo-50 to-white">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <TextGenerateEffect 
-              words="Automatisation & Agents IA" 
-              className="text-4xl md:text-6xl font-bold text-gray-900 mb-6"
-            />
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Transformez vos processus éditoriaux avec des solutions d'automatisation intelligentes 
-              et des agents IA personnalisés qui s'intègrent parfaitement à vos workflows existants.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="bg-white rounded-2xl p-8 shadow-xl border border-purple-100">
-                <div className="flex items-center mb-6">
-                  <Zap className="h-12 w-12 text-purple-600 mr-4" />
-                  <h3 className="text-2xl font-bold text-gray-900">Automatisation de Processus</h3>
-                </div>
-                <p className="text-gray-600 mb-6">
-                  Libérez vos équipes des tâches répétitives grâce à des automatisations intelligentes 
-                  qui s'adaptent à vos besoins spécifiques.
-                </p>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                    Génération automatique de contenus
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                    Workflows de validation et publication
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                    Traitement automatique des données
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                    Intégration avec vos outils existants
-                  </li>
-                </ul>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="bg-white rounded-2xl p-8 shadow-xl border border-indigo-100">
-                <div className="flex items-center mb-6">
-                  <Brain className="h-12 w-12 text-indigo-600 mr-4" />
-                  <h3 className="text-2xl font-bold text-gray-900">Agents IA Personnalisés</h3>
-                </div>
-                <p className="text-gray-600 mb-6">
-                  Déployez des assistants IA spécialisés qui comprennent votre métier et 
-                  s'adaptent à votre ligne éditoriale.
-                </p>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                    Assistants rédactionnels intelligents
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                    Agents de recherche et veille
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                    Chatbots métier personnalisés
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                    Formation et adaptation continue
-                  </li>
-                </ul>
-              </div>
-            </motion.div>
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-8 text-white text-center"
-          >
-            <h3 className="text-2xl font-bold mb-4">Prêt à automatiser vos processus ?</h3>
-            <p className="text-lg mb-6 opacity-90">
-              Découvrez comment nos solutions d'automatisation et nos agents IA peuvent 
-              transformer votre productivité et optimiser vos workflows éditoriaux.
-            </p>
-            <Button
-              borderRadius="1.75rem"
-              className="bg-white text-purple-600 hover:bg-gray-50 font-semibold px-8 py-3"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Demander une démonstration
-            </Button>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Automatisations concrètes (right after Automatisation & Agents IA) */}
-      <section id="automatisations" className="py-24 px-4 bg-gradient-to-b from-white to-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-14"
-          >
-            <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900">
-              Automatisations <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">concrètes</span>
-            </h2>
-            <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mt-4">
-              Projetez-vous avec un scénario concret.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-200">
-                <p className="text-xl leading-relaxed text-gray-800">
-                  Imaginez&nbsp;: vous terminez votre article, vous allez prendre un café.
-                </p>
-                <p className="mt-3 text-lg leading-relaxed text-gray-800">
-                  À votre retour, trois brouillons vous attendent sur votre bureau&nbsp;:
-                </p>
-                <ul className="mt-4 space-y-3 text-gray-800">
-                  <li className="flex items-center gap-3">
-                    <Linkedin className="h-5 w-5 text-blue-600" />
-                    <span>un post LinkedIn</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <Instagram className="h-5 w-5 text-pink-600" />
-                    <span>un post Instagram</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <Twitter className="h-5 w-5 text-cyan-600" />
-                    <span>un post X — rédigés dans votre <strong>style</strong></span>
-                  </li>
-                </ul>
-                <p className="mt-6 text-lg text-gray-700 italic">
-                  Vous validez, ajustez quelques détails, et <strong>en un clic</strong>, vous publiez sur les trois réseaux.
-                </p>
-                <p className="mt-4 text-sm text-gray-500">
-                  C’est exactement ce que nous appelons une automatisation.
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-            >
-              <div className="relative">
-                <img
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
-                  alt="Journaliste soulagé·e au bureau après automatisation"
-                  className="rounded-2xl shadow-2xl border border-gray-200 object-cover w-full h-[320px] md:h-[420px]"
-                />
-                <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-gradient-to-tr from-purple-200 to-blue-200 rounded-2xl blur-md opacity-60" />
-                <div className="absolute -top-4 -right-4 w-28 h-28 bg-gradient-to-tr from-blue-200 to-purple-200 rounded-2xl blur-md opacity-60" />
-              </div>
-            </motion.div>
-          </div>
-
-          <div className="text-center mt-12">
-            <button
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-4 rounded-full bg-gradient-to-r from-blue-600 to-purple-700 text-white font-semibold hover:from-blue-700 hover:to-purple-800 transition-all transform hover:scale-105 shadow-lg"
-            >
-              Mettre en place cette automatisation
-            </button>
-          </div>
-        </div>
-      </section>
 
       {/* Engagements Section */}
       <section id="about" className="py-20 px-4 bg-gray-50">

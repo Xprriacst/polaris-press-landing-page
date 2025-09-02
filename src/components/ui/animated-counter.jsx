@@ -26,8 +26,8 @@ const AnimatedCounter = ({ end, duration = 2, suffix = "", className = "" }) => 
         const multiplier = parseInt(end.replace('x', ''));
         setCount(Math.floor(easeOutCubic * multiplier));
       } else if (typeof end === 'string' && end.includes('%')) {
-        // Handle percentage format like "95%"
-        const percentage = parseInt(end.replace('%', ''));
+        // Handle percentage format like "95%" or "+25%"
+        const percentage = parseInt(end.replace(/[+%]/g, ''));
         setCount(Math.floor(easeOutCubic * percentage));
       } else if (typeof end === 'string' && end.includes('h')) {
         // Handle hours format like "4h"
@@ -56,7 +56,8 @@ const AnimatedCounter = ({ end, duration = 2, suffix = "", className = "" }) => 
     if (typeof end === 'string' && end.includes('x')) {
       return `x${count}`;
     } else if (typeof end === 'string' && end.includes('%')) {
-      return `${count}%`;
+      const hasPlus = end.includes('+');
+      return hasPlus ? `+${count}%` : `${count}%`;
     } else if (typeof end === 'string' && end.includes('h')) {
       return `${count}h`;
     } else {
