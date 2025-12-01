@@ -123,10 +123,7 @@ const HomePage = () => {
         </div>
       </section>
 
-
-      {/* Chiffres Clés Section - masquée temporairement */}
-
-      {/* Nos Services */}
+{/* Nos Services (moved up per new order) */}
       <section id="services" className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <motion.div
