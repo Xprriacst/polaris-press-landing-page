@@ -405,7 +405,7 @@ const LandingPagePME = () => {
               className="flex items-center justify-center p-4"
             >
               <img
-                src="/azure-ai900.png"
+                src="/logo-azure-ai-900.svg"
                 alt="Microsoft Certified: Azure AI Fundamentals"
                 className="h-20 md:h-24 object-contain grayscale hover:grayscale-0 transition-all duration-300"
               />
