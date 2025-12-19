@@ -111,12 +111,24 @@ const HomePage = () => {
                 transition={{ duration: 0.8, delay: 0.5 }}
                 className="flex flex-col items-center"
               >
-                <p className="text-gray-600 mb-4 text-sm">Nous sommes fiers d'être ambassadeurs</p>
-                <img 
-                  src="/logo-osez-ia.png" 
-                  alt="Osez l'IA - Ambassadeur" 
-                  className="h-20 md:h-24 w-auto rounded-2xl shadow-lg"
-                />
+                <p className="text-gray-600 mb-4 text-sm">Nos collaborateurs sont fiers d'être ambassadeurs</p>
+                <div className="flex flex-wrap items-center justify-center gap-6">
+                  <img 
+                    src="/logo-osez-ia.png" 
+                    alt="Osez l'IA - Ambassadeur" 
+                    className="h-20 md:h-24 w-auto rounded-2xl shadow-lg"
+                  />
+                  <img 
+                    src="/logo-activateur-francenum.svg" 
+                    alt="Activateur France Num" 
+                    className="h-20 md:h-24 w-auto rounded-lg shadow-lg bg-white p-2"
+                  />
+                  <img 
+                    src="/logo-azure-ai-900.svg" 
+                    alt="Microsoft Certified Azure AI Fundamentals AI-900" 
+                    className="h-20 md:h-24 w-auto"
+                  />
+                </div>
               </motion.div>
             </div>
           </motion.div>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a3a5c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f2540;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Outer pentagon shape -->
+  <path d="M300 50 L550 180 L550 350 L300 550 L50 350 L50 180 Z" fill="#0f2540" stroke="#5a6a7a" stroke-width="8"/>
+  <!-- Inner white box -->
+  <rect x="80" y="200" width="440" height="140" fill="white" stroke="#5a6a7a" stroke-width="4"/>
+  <!-- Microsoft text -->
+  <text x="300" y="140" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="600" fill="#0f2540">Microsoft</text>
+  <text x="300" y="180" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="24" letter-spacing="6" fill="#0f2540">CERTIFIED</text>
+  <!-- Azure AI Fundamentals text -->
+  <text x="300" y="260" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="36" font-weight="700" fill="#0f2540">AZURE AI</text>
+  <text x="300" y="310" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="36" font-weight="700" fill="#0f2540">FUNDAMENTALS</text>
+  <!-- Blue shield bottom -->
+  <path d="M300 360 L480 360 L480 420 L300 520 L120 420 L120 360 Z" fill="#2b7cd3"/>
+  <!-- Star -->
+  <polygon points="300,400 310,430 345,430 318,450 328,480 300,460 272,480 282,450 255,430 290,430" fill="white"/>
+</svg>

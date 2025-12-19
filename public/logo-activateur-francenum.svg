@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Border lines -->
+  <rect x="10" y="10" width="380" height="8" fill="#1e2a5e"/>
+  <rect x="10" y="382" width="380" height="8" fill="#1e2a5e"/>
+  <rect x="10" y="10" width="8" height="60" fill="#1e2a5e"/>
+  <rect x="382" y="10" width="8" height="60" fill="#1e2a5e"/>
+  <rect x="10" y="330" width="8" height="60" fill="#1e2a5e"/>
+  <rect x="382" y="330" width="8" height="60" fill="#1e2a5e"/>
+  
+  <!-- ACTIVATEUR text -->
+  <text x="200" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="400" letter-spacing="4" fill="#1e2a5e">ACTIVATEUR</text>
+  
+  <!-- [N] symbol -->
+  <g transform="translate(200, 200)">
+    <!-- Left bracket -->
+    <rect x="-80" y="-60" width="15" height="120" fill="#e31937"/>
+    <rect x="-80" y="-60" width="35" height="15" fill="#e31937"/>
+    <rect x="-80" y="45" width="35" height="15" fill="#e31937"/>
+    
+    <!-- N letter -->
+    <rect x="-30" y="-60" width="20" height="120" fill="#e31937"/>
+    <rect x="10" y="-60" width="20" height="120" fill="#e31937"/>
+    <polygon points="-30,-45 -10,-45 30,45 10,45" fill="#e31937"/>
+    
+    <!-- Right bracket -->
+    <rect x="65" y="-60" width="15" height="120" fill="#e31937"/>
+    <rect x="45" y="-60" width="35" height="15" fill="#e31937"/>
+    <rect x="45" y="45" width="35" height="15" fill="#e31937"/>
+  </g>
+  
+  <!-- FRANCE NUM text -->
+  <text x="200" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="38" font-weight="700" letter-spacing="3" fill="#1e2a5e">FRANCE NUM</text>
+</svg>
