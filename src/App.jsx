@@ -15,6 +15,7 @@ import FormationIA02 from './pages/FormationIA02';
 import FormationIA03 from './pages/FormationIA03';
 import FormationSurMesure from './pages/FormationSurMesure';
 import PageAccueilPME from './pages/PageAccueilPME';
+import LandingPagePME from './pages/LandingPagePME';
 import CGV from './pages/CGV';
 import MentionsLegales from './pages/MentionsLegales';
 import PolitiqueConfidentialite from './pages/PolitiqueConfidentialite';
@@ -1026,6 +1027,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/page-d-accueil" element={<PageAccueilPME />} />
+        <Route path="/landing-page" element={<LandingPagePME />} />
         <Route path="/formation-ia01" element={<FormationIA01 />} />
         <Route path="/formation-ia02" element={<FormationIA02 />} />
         <Route path="/formation-ia03" element={<FormationIA03 />} />
