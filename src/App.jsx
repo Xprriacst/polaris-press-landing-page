@@ -18,6 +18,9 @@ import PageAccueilPME from './pages/PageAccueilPME';
 import CGV from './pages/CGV';
 import MentionsLegales from './pages/MentionsLegales';
 import PolitiqueConfidentialite from './pages/PolitiqueConfidentialite';
+import WebinarHome from './pages/WebinarHome';
+import WebinarConfirmation from './pages/WebinarConfirmation';
+import WebinarLive from './pages/WebinarLive';
 
 import './App.css';
 import { 
@@ -1030,6 +1033,9 @@ function App() {
         <Route path="/formation-ia02" element={<FormationIA02 />} />
         <Route path="/formation-ia03" element={<FormationIA03 />} />
         <Route path="/formation-sur-mesure" element={<FormationSurMesure />} />
+        <Route path="/webinaire" element={<WebinarHome />} />
+        <Route path="/webinaire/confirmation" element={<WebinarConfirmation />} />
+        <Route path="/webinaire/live" element={<WebinarLive />} />
         <Route path="/cgv" element={<CGV />} />
         <Route path="/mentions-legales" element={<MentionsLegales />} />
         <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />

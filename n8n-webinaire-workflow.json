@@ -1,0 +1,172 @@
+{
+  "name": "Webinaire Polaris IA - Inscriptions vers Google Sheets",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "webinaire-inscription",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "32f71681-720c-4475-a570-1c157bb37f19",
+      "name": "Webhook - Inscription Webinaire",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1.1,
+      "position": [240, 300],
+      "webhookId": "webinaire-polaris-ia"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "firstName",
+              "name": "Prénom",
+              "value": "={{ $json.body.firstName }}",
+              "type": "string"
+            },
+            {
+              "id": "email",
+              "name": "Email",
+              "value": "={{ $json.body.email }}",
+              "type": "string"
+            },
+            {
+              "id": "timestamp",
+              "name": "Date d'inscription",
+              "value": "={{ $now.toISO() }}",
+              "type": "string"
+            },
+            {
+              "id": "source",
+              "name": "Source",
+              "value": "Landing Page Polaris IA",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "9ca18c9f-b147-4836-9426-b8ee69ec3e18",
+      "name": "Formater les données",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "10ligiolT9zHVlnHNuJeOo4ceRXGeby2HZFJNARhS4-Q",
+          "mode": "list",
+          "cachedResultName": "Liste Webinaire",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/10ligiolT9zHVlnHNuJeOo4ceRXGeby2HZFJNARhS4-Q/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Feuille 1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/10ligiolT9zHVlnHNuJeOo4ceRXGeby2HZFJNARhS4-Q/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData"
+        },
+        "options": {}
+      },
+      "id": "46098892-fe5e-40d3-9c9a-db6135c8b4dc",
+      "name": "Ajouter à Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.4,
+      "position": [680, 300],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "RTdk2CC4XVeQOgqd",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ { \"success\": true, \"message\": \"Inscription enregistrée avec succès\", \"data\": { \"firstName\": $json[\"Prénom\"], \"email\": $json[\"Email\"] } } }}",
+        "options": {
+          "responseHeaders": {
+            "entries": [
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "name": "Access-Control-Allow-Origin",
+                "value": "*"
+              }
+            ]
+          }
+        }
+      },
+      "id": "2de02400-d773-435c-a430-76b1e672fbad",
+      "name": "Répondre au Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [900, 300]
+    },
+    {
+      "parameters": {
+        "content": "## 📝 Workflow Webinaire Polaris IA - VERSION CORRIGÉE\n\n**Objectif :** Capturer les inscriptions au webinaire et les enregistrer dans Google Sheets\n\n**Flux (4 nodes) :**\n1. Webhook reçoit les données POST (firstName, email)\n2. Set formate les données avec les bons noms de colonnes\n3. Google Sheets enregistre avec Auto-Map\n4. Réponse de confirmation au frontend\n\n**Données formatées par le node Set :**\n- Prénom ← $json.body.firstName\n- Email ← $json.body.email  \n- Date d'inscription ← $now.toISO()\n- Source ← Landing Page Polaris IA\n\n**Configuration requise :**\n- Google Sheet avec colonnes : Prénom, Email, Date d'inscription, Source (ligne 1)\n- Credentials Google Sheets OAuth2 configurées\n- Workflow ACTIVÉ\n- Mode Auto-Map dans Google Sheets node",
+        "height": 400,
+        "width": 460
+      },
+      "id": "b0dd5c7f-4f80-4e6f-8bac-f65d17a85add",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [220, -80]
+    }
+  ],
+  "connections": {
+    "Webhook - Inscription Webinaire": {
+      "main": [
+        [
+          {
+            "node": "Formater les données",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Formater les données": {
+      "main": [
+        [
+          {
+            "node": "Ajouter à Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ajouter à Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "Répondre au Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2026-01-18T13:34:00.000Z",
+  "versionId": "2"
+}
