@@ -127,7 +127,7 @@ const HomePage = () => {
                     className="h-20 md:h-24 w-auto rounded-lg shadow-lg bg-white p-2"
                   />
                   <img 
-                    src="/logo-azure-ai-900.svg" 
+                    src="/logo-azure-ai-900.png" 
                     alt="Microsoft Certified Azure AI Fundamentals AI-900" 
                     className="h-20 md:h-24 w-auto"
                   />
@@ -532,7 +532,7 @@ const HomePage = () => {
 
       
       {/* Section Ils nous ont fait confiance */}
-      <section id="references" className="py-20 px-4 bg-gray-50">
+      <section id="references" className="hidden py-20 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
